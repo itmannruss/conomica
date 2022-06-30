@@ -9,6 +9,7 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
       />
+      <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -24,8 +25,7 @@
               <a href="#" class="header__logo"><img
                   src="images/logo.svg"
                   alt=""></a>
-              <a href="#" class="header__runok"><span>₽</span>Рынки
-                инвестирования</a>
+              <a href="#" class="header__runok"><span>₽</span>Торговая площадка</a>
             </div>
             <div class="header__item">
               <ul class="header__nav">
@@ -87,10 +87,9 @@
             </div>
             <div class="profile__banner-items">
               <div class="profile__banner-info">
-                Чтобы полноценно пользоваться Платформой, вам
-                необходимо пройти Верификация инвестора.
+                Чтобы полноценно пользоваться Платформой, вам необходимо подписать Агентский договор
               </div>
-              <a href="#" class="profile__banner-btn">Пройти</a>
+              <a href="#modal-dogovor" data-fancybox="" class="profile__banner-btn">Перейти к подписанию</a>
             </div>
           </div>
           <div class="profile__items">
@@ -348,9 +347,37 @@
 
     </div>
 
+    <div id="modal-dogovor" class="modal-dogovor" style="display: none;">
+      <div class="modal-dogovor__title">
+          Ознакомьтесь и примите условия агентского договора
+      </div>
+      <div class="modal-dogovor__content">
+          <div class="modal-dogovor__content-inner">
+              <div class="modal-dogovor__head">
+                Агентский договор № 84415 1545
+              </div>
+              <div class="modal-dogovor__subhead">
+                Lorem ipsum dolor sit amet, consectet
+              </div>
+              <div class="modal-dogovor__info">
+                 <div class="modal-dogovor__inner">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                  <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea uam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea uam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea uam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                 </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal-dogovor__btn" data-fancybox-close="">Принять</div>
+  </div>
+
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+      <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
 
   </body>

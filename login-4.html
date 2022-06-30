@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>Home</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+      />
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <div class="login">
+        <div class="login__image">
+            <img src="images/login-screen.svg" alt="">
+        </div>
+        <a href="#" class="login__strong"><img src="images/login-strong.svg" alt=""></a>
+        <div class="login__item  login__item-pas">
+            <a href="#"  class="modal-code__back"><img src="images/modal-left.svg" alt=""></a>
+            <div class="login__title">
+                Код из СМС
+            </div>
+            <div class="login__text">
+                Мы отпривали код подтверждения
+                на номер <span>+7 (998) 998-78-82</span>
+            </div>
+            <form action="#">
+                <div class="login__input">
+                    <label for="login-tel">Проверочный код</label>
+                    <input type="text" id="login-tel" class="active" >
+                </div>
+            </form>
+            <div class="login__second">
+                Получить новый код можно через 32 секунды
+            </div>
+            <a href="#" class="login__msg">Не приходит СМС?</a>
+        </div>
+
+        <div class="login__end">
+            Никому не сообщайте код из СМС или свой пароль. Сотрудник платформы никогда их не спросит. Убедитесь, что код пришел от отправителя Conomica. Проверяйте сайт банка в адресной строке: conomica.ru
+        </div>
+    </div>
+
+    <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
