@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="header">
+        <div class="container">
+          <div class="header__items">
+            <div class="header__start">
+              <a href="#" class="header__logo"><img src="images/logo.svg"
+                  alt=""></a>
+              <a href="#" class="header__runok active"><span>₽</span>Торговая площадка</a>
+            </div>
+            <div class="header__item">
+              <ul class="header__nav">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">О платформе</a></li>
+                <li><a href="#">Помощь</a></li>
+              </ul>
+              <div class="header__panel">
+                <div class="header__notice">
+                  <div class="header__notice-item">
+                    <img src="images/uvedomlenie.svg" alt="">
+                  </div>
+                  <div class="header__notice-value">4</div>
+                </div>
+                <div class="header__user">
+                  <div class="header__user-image">
+                    <img src="images/user.svg" alt="">
+                  </div>
+                  <div class="header__user-block">
+                    <div class="header__user-header">
+                      <div class="header__user-name">
+                        Пушкин Павел
+                      </div>
+                      <div class="header__user-arrow">
+                        <img src="images/arrow-b.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="header__user-value">
+                      905 618<span>,00 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu">
+            <ul class="header__menu-nav">
+              <li><a href="#">Мои Деньги</a></li>
+              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#">Транзакции</a></li>
+              <li><a href="#" class="active">Автоинвестироавние</a></li>
+            </ul>
+            <div class="header__menu-btns">
+              <a href="#" class="header__menu-btn">Пополнить</a>
+              <a href="#" class="header__menu-btn">Вывести</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="invest">
+        <div class="container">
+          <form action="#">
+            <div class="invest__header">
+                <div class="invest__header-block">
+                    <div class="invest__header-title">
+                        Автоинвестирование
+                    </div>
+                    <div class="invest__header-text">
+                        Устанавливая настройки автоинвестирования Вы принимаете условия <a href="#">Правил Автоинвестирования</a>
+                    </div>
+                </div>
+                <div class="auto-invest__on">
+                    <label class="active" for="switch">Включено</label><input checked class="switch round" id="switch" type='checkbox'>
+                </div>
+            </div>
+            <div class="invest__items">
+                <div class="invest__item">
+                    <div class="invest__item-header">
+                        <div class="invest__item-header--title">
+                            Настройка по параметрам сделки
+                        </div>
+                    </div>
+                    <div class="invest__blocks">
+                        <div class="invest__block">
+                            <div class="invest__head">
+                                Минимальная сумма в одну сделку
+                            </div>
+                            <div class="invest__input">
+                                <label for="invest-first">₽</label>
+                                <input id="invest-first" type="text" placeholder="103 000">
+                            </div>
+                        </div>
+                        <div class="invest__block">
+                            <div class="invest__head">
+                                Максимальная сумма в одну сделку
+                            </div>
+                            <div class="invest__input">
+                                <label for="invest-first">₽</label>
+                                <input id="invest-first" type="text" placeholder="103 000">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invest__dolg">
+                        <div class="filter__radio">
+                            <div class="filter__radio-title">
+                              Категория долга
+                            </div>
+                            <div class="filter__radio-content">
+                              <div class="filter__radio-item">
+                                <div class="filter__radio-head">
+                                  Экономическая сторона
+                                </div>
+                                <div class="filter__radio-blocks">
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">A</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">B</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">C</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">D</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">E</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox" checked="">
+                                    <div class="filter__radio-inner">T</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">R</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">M</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter__radio-item">
+                                <div class="filter__radio-head">
+                                  Юридическая сторона долга
+                                </div>
+                                <div class="filter__radio-blocks">
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">1</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox" checked="">
+                                    <div class="filter__radio-inner">2</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox" checked="">
+                                    <div class="filter__radio-inner">3</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">4</div>
+                                  </div>
+                                  <div class="filter__radio-block">
+                                    <input type="checkbox">
+                                    <div class="filter__radio-inner">5</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="invest__range">
+                        <div class="filter__range">
+                            <div class="filter__range-item">
+                              <div class="filter__range-head">
+                                Прогнозируемый 
+                                срок взыскания
+                              </div>
+                              <input type="text" class="js-range-slider" name="my_range" value="" />
+                            </div>
+                            <div class="filter__range-item">
+                              <div class="filter__range-head">
+                                Прогнозируемая 
+                                годовая доходность
+                              </div>
+                              <input type="text" class="js-range-slider-second" name="my_range" value="" />
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="invest__right">
+                    <div class="invest__right-header">
+                        Общие настройки
+                    </div>
+                    <div class="invest__right-block">
+                        <div class="invest__block">
+                            <div class="invest__head">
+                                Максимальный размер инвестирования:
+                            </div>
+                            <div class="invest__input">
+                                <label for="invest-first">₽</label>
+                                <input id="invest-first" type="text" placeholder="103 000">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invest__right-radios">
+                        <div class="invest__right-head">
+                            Инвестирование из каких средств:
+                        </div>
+                        <div class="invest__right-radio active">
+                            <div class="invest__right-check">
+                            <input type="radio" name="invest-radios" checked id="radio-first">
+                            </div>
+                            <label for="radio-first">Всех поступающих средств на счёт.</label>
+                        </div>
+                        <div class="invest__right-radio">
+                            <div class="invest__right-check">
+                            <input type="radio" name="invest-radios" id="radio-second">
+                            </div>
+                            <label for="radio-second">Только средств из собственного пополнения счёта.</label>
+                        </div>
+                        <div class="invest__right-radio">
+                            <div class="invest__right-check">
+                            <input type="radio" name="invest-radios" id="radio-three">
+                            </div>
+                            <label for="radio-three">Только возвращенного из других сделок.</label>
+                        </div>
+                    </div>
+                    <div class="invest__right-end">
+                        <label class="invest__header-check checkbox">
+                            <span class="checkbox__inner">
+                              <input type="checkbox" class="agreement" />
+                              <span></span>
+                            </span>
+                            <span class="checkbox__text"
+                              >Устанавливая настройки автоинвестирования Вы принимаете условия <a href="#">Правил Автоинвестирования</a></span
+                            >
+                          </label>
+                        <a href="#modal-code" data-fancybox="" class="invest__right-btn active">Включить автоинвестирование</a>
+                    </div>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          <div class="footer__items">
+            <div class="footer__item">
+              <a href="#" class="footer__logo"><img src="images/logo-footer.svg" alt=""></a>
+              <div class="footer__info">
+                ГК “Содружество” ООО “Профактор”
+                ИНН: 7709976250 ОГРН: 5167746194468
+              </div>
+              <div class="footer__blocks">
+                <div class="footer__block">
+                  <p>Клиентский сервис по телефону:
+                  </p>
+                  <a href="tel:+7 (495) 120-93-61" class="footer__link">+7 (495) 120-93-61</a>
+                </div>
+                <div class="footer__block">
+                  <p>E-mail:
+                  </p>
+                  <a href="mailto:invest@sodrugestvo.org" class="footer__link">invest@sodrugestvo.org</a>
+                </div>
+              </div>
+            </div>
+            <ul class="footer__nav">
+              <li><a href="#">Как это работает</a></li>
+              <li><a href="#">О Палтформе</a></li>
+              <li><a href="#">Помощь</a></li>
+              <li><a href="#">Документы</a></li>
+            </ul>
+            <div class="footer__chat">
+              <div class="footer__chat-items">
+                <div class="footer__chat-item">
+                  <div class="footer__chat-head">
+                    Наш чат
+                  </div>
+                  <div class="footer__chat-text">
+                    Присоединяйся к нашему
+                    сообществу инвесторов
+                  </div>
+                </div>
+                <a href="#" class="footer__chat-telegramm"><img src="images/footer-telegram.svg" alt=""></a>
+              </div>
+              <a href="#" class="footer__chat-btn">Перейти к чату</a>
+            </div>
+          </div>
+          <a href="#" class="footer__politic">Политика конфиденциальности</a>
+          <p class="footer__politic">2020 © Финансовая компания «Содружество»</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="modal-code" class="modal-code" style="display: none;">
+        <a href="#modal-invest" data-fancybox="" class="modal-code__back"><img src="images/modal-left.svg" alt=""></a>
+        <div class="modal-code__title">
+            Подтверждение
+        </div>
+        <div class="modal-code__info">
+            Мы отпривали код подтверждения
+            на номер <span>+7 (998) 998-78-82</span>
+        </div>
+        <div class="modal-code__input">
+            <label for="code">Проверочный код</label>
+            <input type="text" id="code">
+        </div>
+        <div class="modal-code__end">
+            Получить новый код можно
+            через <span>00:15</span>
+        </div>
+        <a href="#modal-ok" data-fancybox="" class="modal-code__link">Не приходит СМС?</a>
+    </div>
+
+    <div id="modal-ok" class="modal-ok" style="display: none;">
+        <a href="#" class="modal-ok__logo">
+            <img src="images/moda-logo.svg" alt="">
+        </a>
+        <div class="modal-ok__title">
+            Успешно!
+        </div>
+        <div class="modal-ok__text">
+            Вы инвестировали в проект ООО Саиджон  ID 14959562
+        </div>
+        <div class="modal-ok__btn" data-fancybox-close="">Отлично</div>
+    </div>
+
+    <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
