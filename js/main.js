@@ -16,14 +16,6 @@ $(document).ready(function () {
     postfix: ' мес',
   })
 
-  $('.js-range-slider-second').ionRangeSlider({
-    type: 'double',
-    min: 0,
-    max: 100,
-    to: 500,
-    postfix: '%',
-  })
-
   $('.project__nav-item--filter').click(function () {
     $(this).toggleClass('active')
     $('.filter').slideToggle()
@@ -160,6 +152,35 @@ $(document).ready(function () {
     $('.t-dropdown-select').removeClass('active')
     event.stopPropagation()
   })
+
+
+ $('[data-profile-tabs]').on('click', function () {
+    if (!$(this).hasClass('active')) {
+      var index = $(this).index()
+      $(this).addClass('active').siblings().removeClass('active')
+      $('[data-profile-content]').hide().eq(index).fadeIn()
+    }
+    return false
+  });
+
+  $(".change__profile-input label").click(function(){
+    $(this).prev().toggleClass("active");
+  });
+
+  $(".modal__radio-input").click(function(){
+    $(".modal-avatar__item").removeClass("active");
+    if ($(this).is(':checked')){
+      $(this).parent().addClass("active");
+    } 
+  })
+
+  $('.js-range-slider-second').ionRangeSlider({
+    type: 'double',
+    min: 0,
+    max: 100,
+    to: 500,
+    postfix: '%',
+  });
 
   $('.history__projects-header').click(function () {
     $(this).next().slideToggle('fast')
