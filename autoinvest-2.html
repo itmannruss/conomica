@@ -22,7 +22,6 @@
             <div class="header__start">
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
-              <a href="#" class="header__runok active"><span>₽</span>Торговая площадка</a>
             </div>
             <div class="header__item">
               <ul class="header__nav">
@@ -47,11 +46,28 @@
                         Пушкин Павел
                       </div>
                       <div class="header__user-arrow">
-                        <img src="images/arrow-b.svg" alt="">
+                        <img src="images/header_user-arrow.svg" alt="">
+                        <img src="images/user-strong.svg" alt="">
                       </div>
                     </div>
                     <div class="header__user-value">
                       905 618<span>,00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="header__user-drop">
+                    <div class="header__user-drop--inner">
+                        <div class="header__user-drop--try">
+                            <img src="images/try-user.svg" alt="">
+                        </div>
+                        <ul class="header__user-drop--list">
+                            <li><a href="#">Реферальный доход</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Уведомления</a></li>
+                            <li><a href="#">Профиль</a></li>
+                        </ul>
+                        <div class="header__user-drop--out">
+                            Выйти
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -61,9 +77,10 @@
           <div class="header__menu">
             <ul class="header__menu-nav">
               <li><a href="#">Мои Деньги</a></li>
+              <li><a href="#">Новые проекты</a></li>
               <li><a href="#">Мои Проекты <span>(38)</span></a></li>
               <li><a href="#">Транзакции</a></li>
-              <li><a href="#" class="active">Автоинвестироавние</a></li>
+              <li><a href="#" class="active">Автоинвестирование</a></li>
             </ul>
             <div class="header__menu-btns">
               <a href="#" class="header__menu-btn">Пополнить</a>
@@ -199,14 +216,18 @@
                                 Прогнозируемый 
                                 срок взыскания
                               </div>
+                              <div class="filter__range-input">
                               <input type="text" class="js-range-slider" name="my_range" value="" />
+                              </div>
                             </div>
                             <div class="filter__range-item">
                               <div class="filter__range-head">
                                 Прогнозируемая 
                                 годовая доходность
                               </div>
+                              <div class="filter__range-input">
                               <input type="text" class="js-range-slider-second" name="my_range" value="" />
+                              </div>
                             </div>
                           </div>
                     </div>
@@ -252,7 +273,7 @@
                     <div class="invest__right-end">
                         <label class="invest__header-check checkbox">
                             <span class="checkbox__inner">
-                              <input type="checkbox" class="agreement" />
+                              <input type="checkbox" checked class="agreement" />
                               <span></span>
                             </span>
                             <span class="checkbox__text"
@@ -327,10 +348,10 @@
             Мы отпривали код подтверждения
             на номер <span>+7 (998) 998-78-82</span>
         </div>
-        <div class="modal-code__input">
-            <label for="code">Проверочный код</label>
-            <input type="text" id="code">
-        </div>
+        <div class="login__input">
+          <input type="text" id="code" class="login__input-item" required>
+          <label for="code"class="login__input-label">Проверочный код</label>
+      </div>
         <div class="modal-code__end">
             Получить новый код можно
             через <span>00:15</span>
@@ -352,7 +373,7 @@
     </div>
 
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="js/ion.rangeSlider.js"></script>
     <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
 

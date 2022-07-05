@@ -27,7 +27,6 @@
             <div class="header__start">
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
-              <a href="#" class="header__runok active"><span>₽</span>Торговая площадка</a>
             </div>
             <div class="header__item">
               <ul class="header__nav">
@@ -36,13 +35,13 @@
                 <li><a href="#">Помощь</a></li>
               </ul>
               <div class="header__panel">
-                <div class="header__notice active">
+                <div class="header__notice">
                   <div class="header__notice-item">
                     <img src="images/uvedomlenie.svg" alt="">
                   </div>
                   <div class="header__notice-value">4</div>
                 </div>
-                <div class="header__user">
+                <div class="header__user active-page">
                   <div class="header__user-image">
                     <img src="images/user.svg" alt="">
                   </div>
@@ -52,11 +51,28 @@
                         Пушкин Павел
                       </div>
                       <div class="header__user-arrow">
-                        <img src="images/arrow-b.svg" alt="">
+                        <img src="images/header_user-arrow.svg" alt="">
+                        <img src="images/user-strong.svg" alt="">
                       </div>
                     </div>
                     <div class="header__user-value">
                       905 618<span>,00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="header__user-drop">
+                    <div class="header__user-drop--inner">
+                        <div class="header__user-drop--try">
+                            <img src="images/try-user.svg" alt="">
+                        </div>
+                        <ul class="header__user-drop--list">
+                            <li><a href="#">Реферальный доход</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Уведомления</a></li>
+                            <li><a href="#">Профиль</a></li>
+                        </ul>
+                        <div class="header__user-drop--out">
+                            Выйти
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -66,6 +82,7 @@
           <div class="header__menu">
             <ul class="header__menu-nav">
               <li><a href="#">Мои Деньги</a></li>
+              <li><a href="#">Новые проекты</a></li>
               <li><a href="#">Мои Проекты <span>(38)</span></a></li>
               <li><a href="#">Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
@@ -577,26 +594,26 @@
                     </div>
                 </div>
                 <div class="verif__inputs verif__inputs-grid">
-                    <div class="verif__input">
+                    <div class="verif__input verif__input-modal">
                       <input type="text" value="4015">
                     </div>
-                    <div class="verif__input">
+                    <div class="verif__input verif__input-modal">
                       <input type="text" value="784601">
                     </div>
-                    <div class="verif__input">
+                    <div class="verif__input verif__input-modal">
                       <input type="text" value="01.12.2015">
                     </div>
-                    <div class="verif__input">
+                    <div class="verif__input verif__input-modal">
                       <input type="text" value="Код поразделения">
                     </div>
                   </div>
                   <div class="verif__input">
-                    <input type="text">
-                    <label>Кем выдан</label>
+                    <input type="text" required class="login__input-item">
+                    <label class="login__input-label">Кем выдан</label>
                   </div>
                   <div class="verif__input">
-                    <input type="text">
-                    <label>Место рождения</label>
+                    <input type="text" class="login__input-item" required>
+                    <label class="login__input-label">Место рождения</label>
                   </div>
             </div>
         </div>

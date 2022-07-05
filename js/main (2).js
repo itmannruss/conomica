@@ -1,11 +1,24 @@
-  
-function onFinishEnd_ionRangeSlider(data) {
-  if(data.to_percent >= 100) {
-	  return 'Без ограничений';
+
+function BuildArgs(min, max, postfix, postfix_max) {
+	let args = {
+    type: 'double',
+    min: min,
+    max: max,
+    to: 500,
+    postfix: '',
+    values: []
+  };
+  for(let i = min; i <= max; ++i)
+	  args.values.push(i + ' ' + postfix);
+  if(postfix_max) {
+	 ++args.max;
+	 args.values.push(postfix_max);
   }
-  
-  return false;
+  return args;
 }
+
+var js_range_slider = BuildArgs(0, 15, 'мес', 'Без ограничений');
+var js_range_slider_second = BuildArgs(0, 100, '%', 'Без ограничений');
 
 
 $(document).ready(function () {
@@ -18,14 +31,7 @@ $(document).ready(function () {
     return false
   })
 
-  $('.js-range-slider').ionRangeSlider({
-    type: 'double',
-    min: 0,
-    max: 15,
-    to: 500,
-    postfix: ' мес',
-	onFinishEnd: onFinishEnd_ionRangeSlider,
-  })
+  $('.js-range-slider').ionRangeSlider(js_range_slider)
 
   $('.project__nav-item--filter').click(function () {
     $(this).toggleClass('active')
@@ -183,31 +189,9 @@ $(document).ready(function () {
     if ($(this).is(':checked')){
       $(this).parent().addClass("active");
     } 
-  });
+  })
 
-  $(".project__tab").on("click", function () {
-    var $el = $(this),
-      id = $el.attr("href");
-
-    $("html, body").animate(
-      {
-        scrollTop: $(id).offset().top - 20,
-      },
-      500
-    );
-
-    return false;
-  });
-
-
-  $('.js-range-slider-second').ionRangeSlider({
-    type: 'double',
-    min: 0,
-    max: 100,
-    to: 500,
-    postfix: '%',
-	onFinishEnd: onFinishEnd_ionRangeSlider,
-  });
+  $('.js-range-slider-second').ionRangeSlider(js_range_slider_second);
 
   $('.history__projects-header').click(function () {
     $(this).next().slideToggle('fast')

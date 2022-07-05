@@ -29,16 +29,16 @@
             </div>
             <form action="#">
                 <div class="login__input">
-                    <label for="login-tel">Телефон</label>
-                    <input type="text" id="login-tel" class="active" value="+7 (995) 998-78-82">
+                    <input type="text" id="login-tel" class="login__input-item active" value="+7 (995) 998-78-82" required>
+                    <label for="login-tel" class="login__input-label">Телефон</label>
                 </div>
                 <div class="login__input">
                     <div class="login__input-see--first">
                         <img src="images/see-pass.svg" alt="">
                         <img src="images/see-pass-2.svg" alt="">
                     </div>
-                    <input type="password" id="login-pass">
-                    <label for="login-pass" >Пароль</label>
+                    <input type="password" class="login__input-item" id="login-pass" required>
+                    <label for="login-pass" class="login__input-label" >Пароль</label>
                 </div>
                 <button class="login__btn">Войти</button>
             </form>
