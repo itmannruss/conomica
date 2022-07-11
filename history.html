@@ -450,5 +450,48 @@
 
     <script src="js/main.js"></script>
 
+    <script>
+      const self = $('#datepicker')
+
+self.daterangepicker({
+  applyButtonClasses: 'd-none',
+  showDropdowns: false,
+  opens: 'center',
+  drops: 'down',
+  autoApply: false,
+  startDate: self.data('start'),
+  endDate: self.data('end'),
+  minDate: self.data('start'),
+  locale: {
+    format: 'DD-MMM',
+    separator: ' - ',
+    applyLabel: 'Готово',
+    cancelLabel: 'Отменить',
+    fromLabel: 'De',
+    toLabel: 'Até',
+    customRangeLabel: 'Custom',
+    weekLabel: 'S',
+    monthNames: [
+      '<span>Январь</span>',
+      '<span>Февраль</span>',
+      '<span>Март</span>',
+      '<span>Апрель</span>',
+      '<span>Май</span>',
+      '<span>Июнь</span>',
+      '<span>Июль</span>',
+      '<span>Август</span>',
+      '<span>Сентябрь</span>',
+      '<span>Октябрь</span>',
+      '<span>Ноябрь</span>',
+      '<span>Декабрь</span>',
+    ],
+    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+    dayNamesShort: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
+    firstDay: 1,
+  },
+})
+    </script>
+
   </body>
 </html>

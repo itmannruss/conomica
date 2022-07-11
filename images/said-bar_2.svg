@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Сгруппировать_13166" data-name="Сгруппировать 13166" transform="translate(-1 1)">
+    <g id="Эллипс_382" data-name="Эллипс 382" transform="translate(3 1)" fill="none" stroke="#2b2b2b" stroke-width="2">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="11" fill="none"/>
+    </g>
+    <text id="_" data-name="₽" transform="translate(13 17)" fill="#2b2b2b" font-size="17" font-family="SegoeUI, Segoe UI"><tspan x="-4.582" y="0">₽</tspan></text>
+  </g>
+</svg>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <meta name="format-detection" content="telephone=no">
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -22,8 +23,12 @@
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
             </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
+            </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -75,13 +80,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#">Мои Деньги</a></li>
-              <li><a href="#" class="active">Новые проекты</a></li>
-              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#">Транзакции</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#" class="active"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn">Вывести</a>
             </div>
@@ -105,6 +110,24 @@
                   Вторичный рынок
                 </div>
               </div>
+              <div class="project__mobile">
+                <div class="t-dropdown-block">
+                  <div class="t-dropdown-select">
+                    <input
+                      type="text"
+                      class="t-dropdown-input project-tab-input"
+                      readonly
+                      placeholder="Первичный рынок"
+                    />
+                  </div>
+                  <div class="t-dropdown-list">
+                    <ul>
+                      <li class="t-dropdown-item project-tab">Первичный рынок</li>
+                      <li class="t-dropdown-item project-tab">Вторичный рынок</li>
+                    </ul>
+                  </div>
+                </div>
+               </div>
               <div class="project__nav">
                 <input type="text" placeholder="Поиск ..." class="project__search-input">
                 <div class="project__nav-item project__nav-item--search">
@@ -126,6 +149,7 @@
                   </svg>
                 </div>
                 <div class="project__nav-item project__nav-item--filter">
+                  <a href="#filter" data-fancybox="" class="project__nav-filer--mobile"></a>
                   <svg xmlns="http://www.w3.org/2000/svg" width="19.778" height="18" viewBox="0 0 19.778 18">
                     <g id="Сгруппировать_961" data-name="Сгруппировать 961" transform="translate(488.778 -310) rotate(90)">
                       <g id="Сгруппировать_960" data-name="Сгруппировать 960" transform="translate(311 470)">
@@ -141,7 +165,7 @@
                 </div>
               </div>
             </div>
-            <div class="hash">
+            <div class="hash" data-da=".filter__form,767,1">
               <div class="hash__items">
                 <div class="hash__item">
                   <div class="hash__name">
@@ -176,14 +200,24 @@
                   </div>
                 </div>
               </div>
-              <div class="hash__del">
+              <div class="hash__del"  data-da=".filter__top,767,2">
                 <img src="images/hash-strong_2.svg" alt="">
                 Сбросить весь фильтр
               </div>
             </div>
-            <div class="filter">
-             
-             <form action="#">
+            <div class="filter" id="filter">
+             <div class="filter__top">
+              <div class="filter__top-start">
+                <div class="filter__top-back" data-fancybox-close="">
+                  <img src="images/arrow-l.svg" alt="">
+                </div>
+                <div class="filter__top-title">
+                  Фильтр
+                </div>
+              </div>
+
+             </div>
+             <form action="#" class="filter__form">
               <div class="filter__items">
                 <div class="filter__radios">
                   <div class="filter__radio">
@@ -284,7 +318,7 @@
               </div>
              </form>
             </div>
-            <div class="project__table" data-content>
+            <div class="project__table project__table-first" data-content>
               <div class="project__table-header">
                 <div class="project__table-head">
                   Проект
@@ -341,26 +375,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -368,9 +425,15 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
                   900 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
@@ -382,7 +445,7 @@
   
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -399,26 +462,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -426,10 +512,103 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
+                </div>
+                <div class="project__table-item">
+                  <a href="#" class="project__table-btn">
+                    Инвестировать
+                  </a>
+                </div>
+              </div>
+
+              <div class="project__table-line">
+                <div class="project__table-item">
+                  <div class="project__table-block active">
+                    <div class="project__table-like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                        </g>
+                      </svg>                  
+                    </div>
+                    <div class="project__table-number">
+                      98725
+                    </div>
+                  </div>
+                  <div class="project__table-name">
+                    ООО «Саиджон»
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
+                  <div class="project__table-category">
+                    A1
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
+                  70 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
+                  71 689 852 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
+                  2 мес.
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
+                  76%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
+                  44%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
+                  <div class="project__table-proces">
+                    <div class="project__table-proces--percent">
+                      57%
+                    </div>
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
+                  15.06.2022
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -439,7 +618,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -456,26 +635,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -483,10 +685,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -496,7 +704,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -513,26 +721,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -540,10 +771,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -553,7 +790,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -570,26 +807,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -597,10 +857,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -610,7 +876,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -627,26 +893,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -654,10 +943,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -667,7 +962,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -684,26 +979,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -711,10 +1029,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -724,7 +1048,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -741,26 +1065,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -768,10 +1115,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -781,7 +1134,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -798,26 +1151,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -825,10 +1201,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -838,7 +1220,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -855,26 +1237,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -882,10 +1287,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -895,7 +1306,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -912,26 +1323,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -939,10 +1373,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -952,7 +1392,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -969,26 +1409,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -996,10 +1459,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -1009,7 +1478,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1026,26 +1495,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -1053,10 +1545,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -1066,7 +1564,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1083,26 +1581,49 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     A1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сумма сбора
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность
+                    годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Собрано:
+                  </div>
                   <div class="project__table-proces">
                     <div class="project__table-proces--percent">
                       57%
@@ -1110,10 +1631,16 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Сбор до
+                  </div>
                   15.06.2022
                 </div>
                 <div class="project__table-item">
-                 -
+                  <div class="mobile-head">
+                    Сумма участия
+                  </div>
+                  -
                 </div>
                 <div class="project__table-item">
                   <a href="#" class="project__table-btn">
@@ -1121,63 +1648,7 @@
                   </a>
                 </div>
               </div>
-              <div class="project__table-line">
-                <div class="project__table-item">
-                  <div class="project__table-block">
-                    <div class="project__table-like">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                        </g>
-                      </svg>                  
-                    </div>
-                    <div class="project__table-number">
-                      98725
-                    </div>
-                  </div>
-                  <div class="project__table-name">
-                    ООО «Саиджон»
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-category">
-                    A1
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  70 000 000 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  71 689 852 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  2 мес.
-                </div>
-                <div class="project__table-item">
-                  76%
-                </div>
-                <div class="project__table-item">
-                  44%
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-proces">
-                    <div class="project__table-proces--percent">
-                      57%
-                    </div>
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  15.06.2022
-                </div>
-                <div class="project__table-item">
-                 -
-                </div>
-                <div class="project__table-item">
-                  <a href="#" class="project__table-btn">
-                    Инвестировать
-                  </a>
-                </div>
-              </div>
+
             </div>
             <div class="project__table project__table-second" data-content style="display: none;">
               <div class="project__table-header">
@@ -1233,29 +1704,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1268,9 +1757,10 @@
                   </a>
                 </div>
               </div>
+
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1287,29 +1777,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1322,9 +1830,10 @@
                   </a>
                 </div>
               </div>
+            
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1341,29 +1850,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice active">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1377,9 +1904,10 @@
                   </a>
                 </div>
               </div>
+
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1396,29 +1924,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1433,7 +1979,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1450,29 +1996,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1487,7 +2051,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1504,29 +2068,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1541,7 +2123,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1558,29 +2140,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1595,7 +2195,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1612,29 +2212,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1649,7 +2267,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1666,29 +2284,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1703,7 +2339,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1720,29 +2356,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1757,7 +2411,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1774,29 +2428,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1811,7 +2483,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1828,29 +2500,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1865,7 +2555,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1882,29 +2572,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1919,7 +2627,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1936,29 +2644,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -1973,7 +2699,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -1990,29 +2716,47 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -2027,7 +2771,7 @@
               </div>
               <div class="project__table-line">
                 <div class="project__table-item">
-                  <div class="project__table-block">
+                  <div class="project__table-block active">
                     <div class="project__table-like">
                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
                         <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
@@ -2044,29 +2788,119 @@
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                   <div class="project__table-category">
                     С1
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
                   5 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
                   5 500 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
                   71 689 852
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
+                  <div class="project__table-notice">
+                    <div class="project__table-notice--item">
+                      <img src="images/uvedomlenie.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <a href="#" class="project__table-btn">
+                    Купить
+                  </a>
+                </div>
+              </div>
+              <div class="project__table-line">
+                <div class="project__table-item">
+                  <div class="project__table-block active">
+                    <div class="project__table-like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                        </g>
+                      </svg>                  
+                    </div>
+                    <div class="project__table-number">
+                      98725
+                    </div>
+                  </div>
+                  <div class="project__table-name">
+                    ООО «Саиджон»
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
+                  <div class="project__table-category">
+                    С1
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                  Цена
+                  </div>
+                  5 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Номинал долга  </div>
+                  5 500 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания  </div>
+                  71 689 852
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок </div>
+                  2 мес.
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая </div>
+                  76%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая </div>
+                  44%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    События </div>
                   <div class="project__table-notice">
                     <div class="project__table-notice--item">
                       <img src="images/uvedomlenie.svg" alt="">
@@ -2159,6 +2993,8 @@
 
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
 
   </body>

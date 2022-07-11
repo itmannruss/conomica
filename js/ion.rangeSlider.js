@@ -258,7 +258,8 @@
             p_to_fake: 0,
             p_to_left: 0,
             p_single_fake: 0,
-            p_single_left: 0
+            p_single_left: 0,
+            offsetMy: 15
         };
 
 
@@ -1310,6 +1311,8 @@
                 this.labels.p_to_left = this.toFixed(this.labels.p_to_left);
                 this.labels.p_to_left = this.checkEdges(this.labels.p_to_left, this.labels.p_to_fake);
 
+				this.labels.p_to_left -=  this.labels.offsetMy;
+
                 this.labels.w_single = this.$cache.single.outerWidth(false);
                 this.labels.p_single_fake = this.labels.w_single / this.coords.w_rs * 100;
                 this.labels.p_single_left = ((this.labels.p_from_left + this.labels.p_to_left + this.labels.p_to_fake) / 2) - (this.labels.p_single_fake / 2);
@@ -1508,19 +1511,12 @@
                     text_to = this.decorate(p_values[this.result.to]);
 
                     this.$cache.single.html(text_single);
-			
+                    this.$cache.from.html(text_from);
 					
 					let _res_ = this.callOnFinishEnd();
 					if(_res_ === false) {
-						this.$cache.from.html(text_from);
 						this.$cache.to.html(text_to);
 					} else {
-						if(this.result.from_percent >= 100) {
-							this.$cache.from.html(_res_);
-						} else {
-							this.$cache.from.html(text_from);
-						}
-						
 						this.$cache.to.html(_res_);
 					}
 					
@@ -1541,18 +1537,13 @@
                     text_to = this.decorate(to_pretty, this.result.to);
 
                     this.$cache.single.html(text_single);
+                    this.$cache.from.html(text_from);
+					
 		
 			let _res_ = this.callOnFinishEnd();
 					if(_res_ === false) {
-						this.$cache.from.html(text_from);
 						this.$cache.to.html(text_to);
 					} else {
-						if(this.result.from_percent >= 100) {
-							this.$cache.from.html(_res_);
-						} else {
-							this.$cache.from.html(text_from);
-						}
-						
 						this.$cache.to.html(_res_);
 					}
 

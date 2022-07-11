@@ -1,14 +1,11 @@
-  
-function onFinishEnd_ionRangeSlider(data) {
-  if(data.to_percent >= 100) {
-	  return 'Без ограничений';
-  }
-  
-  return false;
-}
-
-
 $(document).ready(function () {
+
+  $('.header__burger').click(function () {
+    $(this).children().toggleClass('active')
+    $('.header__item').toggleClass('active')
+    return false
+  })
+
   $('[data-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {
       var index = $(this).index()
@@ -18,18 +15,11 @@ $(document).ready(function () {
     return false
   })
 
-  $('.js-range-slider').ionRangeSlider({
-    type: 'double',
-    min: 0,
-    max: 15,
-    to: 500,
-    postfix: ' мес',
-	onFinishEnd: onFinishEnd_ionRangeSlider,
-  })
-
   $('.project__nav-item--filter').click(function () {
-    $(this).toggleClass('active')
-    $('.filter').slideToggle()
+    if ($(window).width() >= 767) {
+      $(this).toggleClass('active')
+      $('.filter').slideToggle()
+    }
   })
 
   $('.project__nav-item--like').click(function () {
@@ -41,6 +31,13 @@ $(document).ready(function () {
     $('.project__search-input').toggleClass('active')
   })
 
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.project__nav-item--search, .project__search-input').length) {
+      $('.project__search-input').removeClass('active')
+    }
+    e.stopPropagation()
+  })
+
   $(
     '.verif__block-quest--item, .verif__input-quest--item, .profile__quest-item, .profile__balance-quest--item, .work__project-quest--item, .login__quest-item, .add__warn-image'
   ).hover(function () {
@@ -49,9 +46,9 @@ $(document).ready(function () {
 
   $('[data-verification-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {
-      var index = $(this).index()
+      var index2 = $(this).index()
       $(this).addClass('active').siblings().removeClass('active')
-      $('[data-verification-content]').hide().eq(index).fadeIn()
+      $('[data-verification-content]').hide().eq(index2).fadeIn()
     }
     return false
   })
@@ -80,9 +77,9 @@ $(document).ready(function () {
 
   $('[data-project-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {
-      var index = $(this).index()
+      var index3 = $(this).index()
       $(this).addClass('active').siblings().removeClass('active')
-      $('[data-project-content]').hide().eq(index).fadeIn()
+      $('[data-project-content]').hide().eq(index3).fadeIn()
     }
     return false
   })
@@ -139,10 +136,10 @@ $(document).ready(function () {
     }
   })
 
-  $('.t-dropdown-input').on('click', function () {
-    $(this).parent().toggleClass('active')
-    $(this).parent().next().slideToggle('fast')
+  $('.t-dropdown-select').on('click', function () {
     $(this).toggleClass('active')
+    $(this).next().slideToggle('fast')
+    $(this).children().toggleClass('active')
   })
 
   $('.t-dropdown-input').width($('.t-dropdown-select').width() - $('.t-select-btn').width() - 13)
@@ -158,56 +155,54 @@ $(document).ready(function () {
   })
 
   $(document).on('click', function (event) {
-    if ($(event.target).closest('.t-dropdown-input, .t-select-btn, label').length) return
+    if ($(event.target).closest('.t-dropdown-select, .t-select-btn, label').length) return
     $('.t-dropdown-list').slideUp('fast')
     $('.t-dropdown-select').removeClass('active')
     event.stopPropagation()
   })
 
-
- $('[data-profile-tabs]').on('click', function () {
+  $('[data-profile-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {
-      var index = $(this).index()
+      var index4 = $(this).index()
       $(this).addClass('active').siblings().removeClass('active')
-      $('[data-profile-content]').hide().eq(index).fadeIn()
+      $('[data-profile-content]').hide().eq(index4).fadeIn()
     }
     return false
-  });
+  })
 
-  $(".change__profile-input label").click(function(){
-    $(this).prev().toggleClass("active");
-  });
+  $('.change__profile-input label').click(function () {
+    $(this).prev().toggleClass('active')
+  })
 
-  $(".modal__radio-input").click(function(){
-    $(".modal-avatar__item").removeClass("active");
-    if ($(this).is(':checked')){
-      $(this).parent().addClass("active");
-    } 
-  });
+  $('.modal__radio-input').click(function () {
+    $('.modal-avatar__item').removeClass('active')
+    if ($(this).is(':checked')) {
+      $(this).parent().addClass('active')
+    }
+  })
 
-  $(".project__tab").on("click", function () {
+  $('.project__tab').on('click', function () {
     var $el = $(this),
-      id = $el.attr("href");
+      id = $el.attr('href')
 
-    $("html, body").animate(
+    $('html, body').animate(
       {
         scrollTop: $(id).offset().top - 20,
       },
       500
-    );
+    )
 
-    return false;
-  });
+    return false
+  })
 
-
-  $('.js-range-slider-second').ionRangeSlider({
-    type: 'double',
-    min: 0,
-    max: 100,
-    to: 500,
-    postfix: '%',
-	onFinishEnd: onFinishEnd_ionRangeSlider,
-  });
+  $('.project-tab').on('click', function () {
+    if (!$(this).hasClass('active')) {
+      var index5 = $(this).index()
+      $(this).addClass('active').siblings().removeClass('active')
+      $('.project__table').hide().eq(index5).fadeIn()
+    }
+    return false
+  })
 
   $('.history__projects-header').click(function () {
     $(this).next().slideToggle('fast')
@@ -233,47 +228,6 @@ $(document).ready(function () {
     e.stopPropagation()
   })
 
-  const self = $('#datepicker')
-
-  self.daterangepicker({
-    applyButtonClasses: 'd-none',
-    showDropdowns: false,
-    opens: 'center',
-    drops: 'down',
-    autoApply: false,
-    startDate: self.data('start'),
-    endDate: self.data('end'),
-    minDate: self.data('start'),
-    locale: {
-      format: 'DD-MMM',
-      separator: ' - ',
-      applyLabel: 'Готово',
-      cancelLabel: 'Отменить',
-      fromLabel: 'De',
-      toLabel: 'Até',
-      customRangeLabel: 'Custom',
-      weekLabel: 'S',
-      monthNames: [
-        '<span>Январь</span>',
-        '<span>Февраль</span>',
-        '<span>Март</span>',
-        '<span>Апрель</span>',
-        '<span>Май</span>',
-        '<span>Июнь</span>',
-        '<span>Июль</span>',
-        '<span>Август</span>',
-        '<span>Сентябрь</span>',
-        '<span>Октябрь</span>',
-        '<span>Ноябрь</span>',
-        '<span>Декабрь</span>',
-      ],
-      monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-      dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-      dayNamesShort: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
-      firstDay: 1,
-    },
-  })
-
   $('.project__nav-item--calendar').click(function () {
     $(this).addClass('active')
     $(this).children().addClass('active')
@@ -288,4 +242,78 @@ $(document).ready(function () {
     }
     e.stopPropagation()
   })
+
+  function InitIonRangeSlider(object, type, min, max, to, postfix, postfix_max) {
+    object = $(object)
+    let eventCalc = function (data) {
+      let ionRangeSlider = object.data('ionRangeSlider')
+      if (ionRangeSlider) {
+        let setObject = ionRangeSlider.$cache.to
+        if (ionRangeSlider.result.from_percent >= 100) {
+          setObject = ionRangeSlider.$cache.from
+        }
+        if (ionRangeSlider.result.to_percent >= 100) {
+          ionRangeSlider.labels.offsetMy = 15
+        } else if (ionRangeSlider.result.to_percent < 100) {
+          ionRangeSlider.labels.offsetMy = 0
+        }
+
+        ionRangeSlider.labels.p_to_left =
+          ionRangeSlider.coords.p_to_fake + ionRangeSlider.coords.p_handle / 2 - ionRangeSlider.labels.p_to_fake / 2
+        ionRangeSlider.labels.p_to_left = ionRangeSlider.toFixed(ionRangeSlider.labels.p_to_left)
+        ionRangeSlider.labels.p_to_left = ionRangeSlider.checkEdges(
+          ionRangeSlider.labels.p_to_left,
+          ionRangeSlider.labels.p_to_fake
+        )
+
+        ionRangeSlider.labels.p_to_left -= ionRangeSlider.labels.offsetMy
+
+        setObject[0].style.left = ionRangeSlider.labels.p_to_left + '%'
+		
+		
+      }
+    }
+
+    let BuildPostfix = function (num) {
+      let ionRangeSlider = object.data('ionRangeSlider')
+
+      if (ionRangeSlider) {
+        //console.log(ionRangeSlider.result);
+        if (num <= max - 1) {
+          return num + ' ' + postfix
+        }
+        if (ionRangeSlider.result.to_percent >= 100) {
+          ionRangeSlider.labels.offsetMy = 15
+          return postfix_max
+        }
+      }
+      return num
+    }
+
+    object.ionRangeSlider({
+      type: type,
+      min: min,
+      max: max,
+      to: to,
+      prettify_enabled: true,
+      prettify: BuildPostfix,
+      onStart: eventCalc,
+      onChange: eventCalc,
+      onFinish: eventCalc,
+      onUpdate: eventCalc,
+    });
+	
+	let tx = object.data('ionRangeSlider');
+
+	tx.moveByKey(false);
+	tx.moveByKey(false);
+	tx.moveByKey(false);
+	tx.moveByKey(false);
+	tx.moveByKey(false);
+  }
+
+  InitIonRangeSlider('.js-range-slider', 'double', 0, 15, 500, ' мес', 'Без ограничений')
+  InitIonRangeSlider('.js-range-slider-second', 'double', 0, 100, 500, '%', 'Без ограничений')
+
+
 })
