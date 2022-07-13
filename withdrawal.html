@@ -23,8 +23,12 @@
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
             </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
+            </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -76,13 +80,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#">Мои Деньги</a></li>
-              <li><a href="#">Новые проекты</a></li>
-              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#">Транзакции</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn active">Вывести</a>
             </div>
@@ -90,7 +94,7 @@
         </div>
       </div>
 
-    <div class="settings">
+    <div class="settings settings-second">
         <div class="container">
             <div class="settings__items">
                 <div class="settings__item">
@@ -148,7 +152,7 @@
                                       </div>
                                 </div>
                             </div>
-                            <div class="vivod__right">
+                            <div class="vivod__right" data-da=".vivod__item,1260,1">
                                 Согласно правилам пользования платформой, оператор платформы обязан осуществить вывод средств с  счет в течении 2 дней с момента получения запроса.
                             </div>
                         </div>
@@ -233,7 +237,7 @@
                 </div>
               </div>
             </div>
-            <ul class="footer__nav">
+            <ul class="footer__nav" data-da=".footer__item,767,1">
               <li><a href="#">Как это работает</a></li>
               <li><a href="#">О Палтформе</a></li>
               <li><a href="#">Помощь</a></li>
@@ -298,6 +302,7 @@
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.js"></script>
 
   </body>

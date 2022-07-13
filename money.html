@@ -22,8 +22,12 @@
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
             </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
+            </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -75,13 +79,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#">Мои Деньги</a></li>
-              <li><a href="#">Новые проекты</a></li>
-              <li><a href="#" class="active">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#">Транзакции</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#" class="active"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn">Вывести</a>
             </div>
@@ -91,6 +95,9 @@
 
       <div class="project project-money">
         <div class="container">
+          <div class="project__header-title--mobile">
+            Мои Инвестиции
+          </div>
           <div class="project__header">
             <h2 class="project__header-title">Мои Проекты  <span>(38)</span></h2>
             <a href="#" class="project__header-link">Мой архив </a>
@@ -106,6 +113,9 @@
               </a>
             </div>
             <div class="project__nav">
+              <div class="project-mobile__title">
+                В процессе наполнения
+              </div>
                 <div class="project__nav-summ--value">
                     Общий размер участия: <span> 70 000 000,00</span> ₽
                 </div>
@@ -120,10 +130,10 @@
                 Категория
               </div>
               <div class="project__table-head">
-                Размер инвестиции
+                <span>Размер инвестиции</span>
               </div>
               <div class="project__table-head">
-                Прогноз взыскания
+                <span>Прогноз взыскания</span>
               </div>
               <div class="project__table-head">
                 Срок
@@ -166,25 +176,46 @@
               </div>
               <div class="project__table-item">
                 <div class="project__table-category">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
                     D-/3н
                 </div>
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Размер инвестиции
+                </div>
                 70 000 000 <span>₽</span>
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Прогноз взыскания
+                </div>
                 71 689 852 <span>₽</span>
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Срок
+                </div>
                 2 мес.
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность простая
+                </div>
                 76%
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность годовая
+                </div>
                 44%
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                  Собрано
+                </div>
                 <div class="project__table-proces">
                   <div class="project__table-proces--percent">
                     57%
@@ -192,6 +223,9 @@
                 </div>
               </div>
               <div class="project__table-item">
+                <div class="mobile-head">
+                Сбор до
+                </div>
                 15.06.2022
               </div>
               <div class="project__table-item">
@@ -201,167 +235,239 @@
               </div>
             </div>
             <div class="project__table-line">
-                <div class="project__table-item">
-                  <div class="project__table-block active">
-                    <div class="project__table-like">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                        </g>
-                      </svg>                  
-                    </div>
-                    <div class="project__table-number">
-                      98725
-                    </div>
+              <div class="project__table-item">
+                <div class="project__table-block active">
+                  <div class="project__table-like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                      <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                        <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                      </g>
+                    </svg>                  
                   </div>
-                  <div class="project__table-name">
-                    ООО «Саиджон»
+                  <div class="project__table-number">
+                    98725
                   </div>
                 </div>
-                <div class="project__table-item">
-                  <div class="project__table-category">
-                      D-/3н
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  70 000 000 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  71 689 852 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  2 мес.
-                </div>
-                <div class="project__table-item">
-                  76%
-                </div>
-                <div class="project__table-item">
-                  44%
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-proces">
-                    <div class="project__table-proces--percent">
-                      57%
-                    </div>
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  15.06.2022
-                </div>
-                <div class="project__table-item">
-                  <a href="#" class="project__table-btn">
-                      Инвестировать ещё
-                  </a>
+                <div class="project__table-name">
+                  ООО «Саиджон»
                 </div>
               </div>
-              <div class="project__table-line">
-                <div class="project__table-item">
-                  <div class="project__table-block active">
-                    <div class="project__table-like">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                        </g>
-                      </svg>                  
-                    </div>
-                    <div class="project__table-number">
-                      98725
-                    </div>
+              <div class="project__table-item">
+                <div class="project__table-category">
+                  <div class="mobile-head">
+                    Категория
                   </div>
-                  <div class="project__table-name">
-                    ООО «Саиджон»
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-category">
-                      D-/3н
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  70 000 000 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  71 689 852 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  2 мес.
-                </div>
-                <div class="project__table-item">
-                  76%
-                </div>
-                <div class="project__table-item">
-                  44%
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-proces">
-                    <div class="project__table-proces--percent">
-                      57%
-                    </div>
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  15.06.2022
-                </div>
-                <div class="project__table-item">
-                  <a href="#" class="project__table-btn">
-                      Инвестировать ещё
-                  </a>
+                    D-/3н
                 </div>
               </div>
-              <div class="project__table-line">
-                <div class="project__table-item">
-                  <div class="project__table-block active">
-                    <div class="project__table-like">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                        </g>
-                      </svg>                  
-                    </div>
-                    <div class="project__table-number">
-                      98725
-                    </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Размер инвестиции
+                </div>
+                70 000 000 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Прогноз взыскания
+                </div>
+                71 689 852 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Срок
+                </div>
+                2 мес.
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность простая
+                </div>
+                76%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность годовая
+                </div>
+                44%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Собрано
+                </div>
+                <div class="project__table-proces">
+                  <div class="project__table-proces--percent">
+                    57%
                   </div>
-                  <div class="project__table-name">
-                    ООО «Саиджон»
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-category">
-                      D-/3н
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  70 000 000 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  71 689 852 <span>₽</span>
-                </div>
-                <div class="project__table-item">
-                  2 мес.
-                </div>
-                <div class="project__table-item">
-                  76%
-                </div>
-                <div class="project__table-item">
-                  44%
-                </div>
-                <div class="project__table-item">
-                  <div class="project__table-proces">
-                    <div class="project__table-proces--percent">
-                      57%
-                    </div>
-                  </div>
-                </div>
-                <div class="project__table-item">
-                  15.06.2022
-                </div>
-                <div class="project__table-item">
-                  <a href="#" class="project__table-btn">
-                      Инвестировать ещё
-                  </a>
                 </div>
               </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                Сбор до
+                </div>
+                15.06.2022
+              </div>
+              <div class="project__table-item">
+                <a href="#" class="project__table-btn">
+                    Инвестировать ещё
+                </a>
+              </div>
+            </div>
+            <div class="project__table-line">
+              <div class="project__table-item">
+                <div class="project__table-block active">
+                  <div class="project__table-like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                      <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                        <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                      </g>
+                    </svg>                  
+                  </div>
+                  <div class="project__table-number">
+                    98725
+                  </div>
+                </div>
+                <div class="project__table-name">
+                  ООО «Саиджон»
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="project__table-category">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
+                    D-/3н
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Размер инвестиции
+                </div>
+                70 000 000 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Прогноз взыскания
+                </div>
+                71 689 852 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Срок
+                </div>
+                2 мес.
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность простая
+                </div>
+                76%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность годовая
+                </div>
+                44%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Собрано
+                </div>
+                <div class="project__table-proces">
+                  <div class="project__table-proces--percent">
+                    57%
+                  </div>
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                Сбор до
+                </div>
+                15.06.2022
+              </div>
+              <div class="project__table-item">
+                <a href="#" class="project__table-btn">
+                    Инвестировать ещё
+                </a>
+              </div>
+            </div>
+            <div class="project__table-line">
+              <div class="project__table-item">
+                <div class="project__table-block active">
+                  <div class="project__table-like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                      <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                        <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                      </g>
+                    </svg>                  
+                  </div>
+                  <div class="project__table-number">
+                    98725
+                  </div>
+                </div>
+                <div class="project__table-name">
+                  ООО «Саиджон»
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="project__table-category">
+                  <div class="mobile-head">
+                    Категория
+                  </div>
+                    D-/3н
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Размер инвестиции
+                </div>
+                70 000 000 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Прогноз взыскания
+                </div>
+                71 689 852 <span>₽</span>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Срок
+                </div>
+                2 мес.
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность простая
+                </div>
+                76%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Доходность годовая
+                </div>
+                44%
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                  Собрано
+                </div>
+                <div class="project__table-proces">
+                  <div class="project__table-proces--percent">
+                    57%
+                  </div>
+                </div>
+              </div>
+              <div class="project__table-item">
+                <div class="mobile-head">
+                Сбор до
+                </div>
+                15.06.2022
+              </div>
+              <div class="project__table-item">
+                <a href="#" class="project__table-btn">
+                    Инвестировать ещё
+                </a>
+              </div>
+            </div>
           </div>
          </div>
 
@@ -376,6 +482,9 @@
                 </a>
               </div>
               <div class="project__nav">
+                <div class="project-mobile__title">
+                  Активные
+                </div>
                   <div class="project__nav-summ--value">
                       Общий размер участия: <span> 70 000 000,00</span> ₽
                   </div>
@@ -390,10 +499,10 @@
                   Категория
                 </div>
                 <div class="project__table-head">
-                  Размер инвестиции
+                  <span>Размер инвестиции</span>
                 </div>
                 <div class="project__table-head">
-                  Прогноз взыскания
+                  <span>Прогноз взыскания</span>
                 </div>
                 <div class="project__table-head">
                   Срок
@@ -436,25 +545,46 @@
                 </div>
                 <div class="project__table-item">
                   <div class="project__table-category">
+                    <div class="mobile-head">
+                      Категория
+                    </div>
                       D-/3н
                   </div>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Размер инвестиции
+                  </div>
                   70 000 000 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
+                  </div>
                   71 689 852 <span>₽</span>
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
+                  </div>
                   2 мес.
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая
+                  </div>
                   76%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая
+                  </div>
                   44%
                 </div>
                 <div class="project__table-item">
+                  <div class="mobile-head">
+                    Транзакции
+                  </div>
                   <a href="#" class="archive__link">Смотреть</a>
                 </div>
                 <div class="project__table-item">
@@ -471,165 +601,232 @@
                   </a>
                 </div>
               </div>
-  
+
               <div class="project__table-line">
-                  <div class="project__table-item">
-                    <div class="project__table-block active">
-                      <div class="project__table-like">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                          <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                            <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                          </g>
-                        </svg>                  
-                      </div>
-                      <div class="project__table-number">
-                        98725
-                      </div>
+                <div class="project__table-item">
+                  <div class="project__table-block active">
+                    <div class="project__table-like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                        </g>
+                      </svg>                  
                     </div>
-                    <div class="project__table-name">
-                      ООО «Саиджон»
+                    <div class="project__table-number">
+                      98725
                     </div>
                   </div>
-                  <div class="project__table-item">
-                    <div class="project__table-category">
-                        D-/3н
+                  <div class="project__table-name">
+                    ООО «Саиджон»
+                  </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="project__table-category">
+                    <div class="mobile-head">
+                      Категория
                     </div>
+                      D-/3н
                   </div>
-                  <div class="project__table-item">
-                    70 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Размер инвестиции
                   </div>
-                  <div class="project__table-item">
-                    71 689 852 <span>₽</span>
+                  70 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
                   </div>
-                  <div class="project__table-item">
-                    2 мес.
+                  71 689 852 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
                   </div>
-                  <div class="project__table-item">
-                    76%
+                  2 мес.
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая
                   </div>
-                  <div class="project__table-item">
-                    44%
+                  76%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая
                   </div>
-                  <div class="project__table-item">
-                    <a href="#" class="archive__link">Смотреть</a>
+                  44%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Транзакции
                   </div>
-                  <div class="project__table-item">
-                    <div class="project__table-notice--item">
+                  <a href="#" class="archive__link">Смотреть</a>
+                </div>
+                <div class="project__table-item">
+                  <div class="project__table-notice">
+                      <div class="project__table-notice--item">
                         <img src="images/uvedomlenie.svg" alt="">
                       </div>
-                  </div>
-                  <div class="project__table-item">
-                    <a href="#" class="project__table-btn cancel">
+                    </div>
+                </div>
+                <div class="project__table-item">
+                  <a href="#" class="project__table-btn">
                       Отменить
-                    </a>
+                  </a>
+                </div>
+              </div>
+              <div class="project__table-line">
+                <div class="project__table-item">
+                  <div class="project__table-block active">
+                    <div class="project__table-like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                        </g>
+                      </svg>                  
+                    </div>
+                    <div class="project__table-number">
+                      98725
+                    </div>
+                  </div>
+                  <div class="project__table-name">
+                    ООО «Саиджон»
                   </div>
                 </div>
-  
-                <div class="project__table-line">
-                  <div class="project__table-item">
-                    <div class="project__table-block active">
-                      <div class="project__table-like">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                          <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                            <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                          </g>
-                        </svg>                  
-                      </div>
-                      <div class="project__table-number">
-                        98725
-                      </div>
+                <div class="project__table-item">
+                  <div class="project__table-category">
+                    <div class="mobile-head">
+                      Категория
                     </div>
-                    <div class="project__table-name">
-                      ООО «Саиджон»
-                    </div>
+                      D-/3н
                   </div>
-                  <div class="project__table-item">
-                    <div class="project__table-category">
-                        D-/3н
-                    </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Размер инвестиции
                   </div>
-                  <div class="project__table-item">
-                    70 000 000 <span>₽</span>
+                  70 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
                   </div>
-                  <div class="project__table-item">
-                    71 689 852 <span>₽</span>
+                  71 689 852 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
                   </div>
-                  <div class="project__table-item">
-                    2 мес.
+                  2 мес.
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая
                   </div>
-                  <div class="project__table-item">
-                    76%
+                  76%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая
                   </div>
-                  <div class="project__table-item">
-                    44%
+                  44%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Транзакции
                   </div>
-                  <div class="project__table-item">
-                    <a href="#" class="archive__link">Смотреть</a>
-                  </div>
-                  <div class="project__table-item">
-                    <div class="project__table-notice--item">
+                  <a href="#" class="archive__link">Смотреть</a>
+                </div>
+                <div class="project__table-item">
+                  <div class="project__table-notice">
+                      <div class="project__table-notice--item">
                         <img src="images/uvedomlenie.svg" alt="">
                       </div>
+                    </div>
+                </div>
+                <div class="project__table-item">
+                  <a href="#" class="project__table-btn">
+                      Отменить
+                  </a>
+                </div>
+              </div>
+              <div class="project__table-line">
+                <div class="project__table-item">
+                  <div class="project__table-block active">
+                    <div class="project__table-like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
+                        <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
+                          <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
+                        </g>
+                      </svg>                  
+                    </div>
+                    <div class="project__table-number">
+                      98725
+                    </div>
                   </div>
-                  <div class="project__table-item">
-                    <a href="#" class="project__table-btn">
-                      Продать
-                    </a>
+                  <div class="project__table-name">
+                    ООО «Саиджон»
                   </div>
                 </div>
-  
-                <div class="project__table-line">
-                  <div class="project__table-item">
-                    <div class="project__table-block active">
-                      <div class="project__table-like">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 12 16">
-                          <g id="Сгруппировать_12469" data-name="Сгруппировать 12469" transform="translate(4.269 1.387)">
-                            <path id="Контур_22628" data-name="Контур 22628" d="M0,0H12V16L6,12,0,16Z" transform="translate(-4.269 -1.387)" fill="#9299a2"/>
-                          </g>
-                        </svg>                  
-                      </div>
-                      <div class="project__table-number">
-                        98725
-                      </div>
+                <div class="project__table-item">
+                  <div class="project__table-category">
+                    <div class="mobile-head">
+                      Категория
                     </div>
-                    <div class="project__table-name">
-                      ООО «Саиджон»
-                    </div>
+                      D-/3н
                   </div>
-                  <div class="project__table-item">
-                    <div class="project__table-category">
-                        D-/3н
-                    </div>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Размер инвестиции
                   </div>
-                  <div class="project__table-item">
-                    70 000 000 <span>₽</span>
+                  70 000 000 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Прогноз взыскания
                   </div>
-                  <div class="project__table-item">
-                    71 689 852 <span>₽</span>
+                  71 689 852 <span>₽</span>
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Срок
                   </div>
-                  <div class="project__table-item">
-                    2 мес.
+                  2 мес.
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность простая
                   </div>
-                  <div class="project__table-item">
-                    76%
+                  76%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Доходность годовая
                   </div>
-                  <div class="project__table-item">
-                    44%
+                  44%
+                </div>
+                <div class="project__table-item">
+                  <div class="mobile-head">
+                    Транзакции
                   </div>
-                  <div class="project__table-item">
-                    <a href="#" class="archive__link">Смотреть</a>
-                  </div>
-                  <div class="project__table-item">
-                    <div class="project__table-notice--item">
+                  <a href="#" class="archive__link">Смотреть</a>
+                </div>
+                <div class="project__table-item">
+                  <div class="project__table-notice">
+                      <div class="project__table-notice--item">
                         <img src="images/uvedomlenie.svg" alt="">
                       </div>
-                  </div>
-                  <div class="project__table-item">
-                    <a href="#" class="project__table-btn">
-                      Продать
-                    </a>
-                  </div>
+                    </div>
                 </div>
+                <div class="project__table-item">
+                  <a href="#" class="project__table-btn">
+                      Отменить
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
    
@@ -658,7 +855,7 @@
                 </div>
               </div>
             </div>
-            <ul class="footer__nav">
+            <ul class="footer__nav" data-da=".footer__item,767,1">
               <li><a href="#">Как это работает</a></li>
               <li><a href="#">О Палтформе</a></li>
               <li><a href="#">Помощь</a></li>
@@ -689,6 +886,7 @@
 
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.js"></script>
 
   </body>

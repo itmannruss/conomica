@@ -21,12 +21,15 @@
         <div class="container">
           <div class="header__items">
             <div class="header__start">
-              <a href="#" class="header__logo"><img
-                  src="images/logo.svg"
+              <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
+            </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
             </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -34,8 +37,7 @@
               <div class="header__panel">
                 <div class="header__notice">
                   <div class="header__notice-item">
-                    <img src="images/uvedomlenie.svg"
-                      alt="">
+                    <img src="images/uvedomlenie.svg" alt="">
                   </div>
                   <div class="header__notice-value">4</div>
                 </div>
@@ -49,9 +51,8 @@
                         Пушкин Павел
                       </div>
                       <div class="header__user-arrow">
-                        <img src="images/header_user-arrow.svg"
-                          alt="">
-                          <img src="images/user-strong.svg" alt="">
+                        <img src="images/header_user-arrow.svg" alt="">
+                        <img src="images/user-strong.svg" alt="">
                       </div>
                     </div>
                     <div class="header__user-value">
@@ -80,13 +81,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#">Мои Деньги</a></li>
-              <li><a href="#">Новые проекты</a></li>
-              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#">Транзакции</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn">Вывести</a>
             </div>
@@ -107,7 +108,7 @@
               <div class="verif__tab active" data-verification-tabs>
                 <div class="verif__tab-point"></div>
                 <div class="verif__tab-name">
-                  Физическое лицо
+                  Физ<span>ическое</span><b>.</b> лицо
                 </div>
               </div>
               <div class="verif__tab" data-verification-tabs>
@@ -119,7 +120,7 @@
               <div class="verif__tab" data-verification-tabs>
                 <div class="verif__tab-point"></div>
                 <div class="verif__tab-name">
-                  Юридическое лицо
+                  Юр<span>идическое</span><b>.</b> лицо
                 </div>
               </div>
             </div>
@@ -156,11 +157,11 @@
                 </div>
                 <div class="verif__input error">
                   <input type="text" required>
-                  <label>Фамилия</label>
+                  <label>Фамилия<span>*</span></label>
                 </div>
                 <div class="verif__input">
                   <input type="text" required>
-                  <label>Имя</label>
+                  <label>Имя<span>*</span></label>
                 </div>
                 <div class="verif__input">
                   <div class="verif__field">
@@ -171,12 +172,12 @@
                 </div>
                 <div class="verif__input">
                   <input type="text" required>
-                  <label>ИНН</label>
+                  <label>ИНН<span>*</span></label>
                 </div>
                 <div class="verif__inputs">
                   <div class="verif__input date">
                     <input type="text" required>
-                    <label>Дата рождения</label>
+                    <label>Дата рождения<span>*</span></label>
                   </div>
                   <div class="verif__input mail">
                     <div class="verif__input-quest">
@@ -201,7 +202,7 @@
                       </div>
                     </div>
                     <input type="text" required>
-                    <label>E-mail</label>
+                    <label>E-mail<span>*</span></label>
                   </div>
                 </div>
                 <div class="verif__end">
@@ -238,32 +239,32 @@
                 <div class="verif__inputs verif__inputs-grid">
                   <div class="verif__input">
                     <input type="text" required>
-                    <label>Серия</label>
+                    <label>Серия<span>*</span></label>
                   </div>
                   <div class="verif__input">
                     <input type="text" required>
-                    <label>Номер</label>
+                    <label>Номер<span>*</span></label>
                   </div>
                   <div class="verif__input">
                     <input type="text" required>
-                    <label>Дата выдачи</label>
+                    <label>Дата выдачи<span>*</span></label>
                   </div>
                   <div class="verif__input">
                     <input type="text" required>
-                    <label>Код поразделения</label>
+                    <label>Код поразделения<span>*</span></label>
                   </div>
                 </div>
                 <div class="verif__input">
                   <input type="text" required>
-                  <label>Кем выдан</label>
+                  <label>Кем выдан<span>*</span></label>
                 </div>
                 <div class="verif__input">
                   <input type="text" required>
-                  <label>Место рождения</label>
+                  <label>Место рождения<span>*</span></label>
                 </div>
                 <div class="verif__input">
                   <input type="text" required>
-                  <label>Адрес регистрации</label>
+                  <label>Адрес регистрации<span>*</span></label>
                 </div>
                 <div class="verif__file">
                   <div class="verif__file-top">
@@ -682,7 +683,7 @@
                 </div>
               </div>
             </div>
-            <ul class="footer__nav">
+            <ul class="footer__nav" data-da=".footer__item,767,1">
               <li><a href="#">Как это работает</a></li>
               <li><a href="#">О Палтформе</a></li>
               <li><a href="#">Помощь</a></li>
@@ -717,6 +718,7 @@
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+      <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.js"></script>
 
   </body>

@@ -21,12 +21,15 @@
         <div class="container">
           <div class="header__items">
             <div class="header__start">
-              <a href="#" class="header__logo"><img
-                  src="images/logo.svg"
+              <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
+            </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
             </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -34,8 +37,7 @@
               <div class="header__panel">
                 <div class="header__notice">
                   <div class="header__notice-item">
-                    <img src="images/uvedomlenie.svg"
-                      alt="">
+                    <img src="images/uvedomlenie.svg" alt="">
                   </div>
                   <div class="header__notice-value">4</div>
                 </div>
@@ -49,9 +51,8 @@
                         Пушкин Павел
                       </div>
                       <div class="header__user-arrow">
-                        <img src="images/header_user-arrow.svg"
-                          alt="">
-                          <img src="images/user-strong.svg" alt="">
+                        <img src="images/header_user-arrow.svg" alt="">
+                        <img src="images/user-strong.svg" alt="">
                       </div>
                     </div>
                     <div class="header__user-value">
@@ -80,13 +81,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#" class="active">Мои Деньги</a></li>
-              <li><a href="#">Новые проекты</a></li>
-              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#">Транзакции</a></li>
+              <li><a href="#" class="active"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn">Вывести</a>
             </div>
@@ -99,14 +100,14 @@
         <div class="container">
           <div class="profile__banner">
             <div class="profile__banner-image">
-              <img src="images/profile-banner.svg" alt="">
+              <img src="images/profile-banner.png" alt="">
             </div>
             <div class="profile__banner-items">
               <div class="profile__banner-info">
                 Чтобы полноценно пользоваться Платформой, вам
                 необходимо пройти Верификация инвестора.
               </div>
-              <a href="#" class="profile__banner-btn">Пройти верификацию</a>
+              <a href="#" class="profile__banner-btn">Пройти</a>
             </div>
           </div>
           <div class="profile__items">
@@ -175,7 +176,7 @@
                 </div>
               </div>
               <div class="profile__blocks">
-                <div class="profile__block">
+                <div class="profile__block desk">
                   <div class="profile__block-name">
                     Прогноз простой доходности
                   </div>
@@ -183,7 +184,7 @@
                     0%
                   </div>
                 </div>
-                <div class="profile__block">
+                <div class="profile__block desk">
                   <div class="profile__block-name">
                     Средний срок
                   </div>
@@ -191,12 +192,28 @@
                     0 мес.
                   </div>
                 </div>
-                <div class="profile__block">
+                <div class="profile__block desk">
                   <div class="profile__block-name">
                     Прогноз годовой доходности
                   </div>
                   <div class="profile__block-value">
                     0%
+                  </div>
+                </div>
+                <div class="profile__block mobile">
+                  <div class="profile__block-name">
+                    Сейчас на Платформе
+                  </div>
+                  <div class="profile__block-value">
+                    0<span>,00 ₽</span> 
+                  </div>
+                </div>
+                <div class="profile__block mobile">
+                  <div class="profile__block-name">
+                    с учетом прогноза
+                  </div>
+                  <div class="profile__block-value">
+                    0<span>,00 ₽</span> 
                   </div>
                 </div>
                 <div class="profile__block">
@@ -209,7 +226,7 @@
                     </div>
                   </div>
                   <div class="profile__block-value">
-                    0 проекта
+                    0 <b>проекта</b>
                   </div>
                 </div>
               </div>
@@ -334,7 +351,7 @@
                 </div>
               </div>
             </div>
-            <ul class="footer__nav">
+            <ul class="footer__nav" data-da=".footer__item,767,1">
               <li><a href="#">Как это работает</a></li>
               <li><a href="#">О Палтформе</a></li>
               <li><a href="#">Помощь</a></li>
@@ -369,6 +386,7 @@
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+      <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.js"></script>
 
   </body>

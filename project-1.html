@@ -15,15 +15,19 @@
 
     <div class="wrapper">
 
-        <div class="header">
+        <div class="header header-project">
             <div class="container">
               <div class="header__items">
                 <div class="header__start">
                   <a href="#" class="header__logo"><img src="images/logo.svg"
                       alt=""></a>
                 </div>
+                <div class="header__burger">
+                  <a href="#"><span></span></a>
+                </div>
                 <div class="header__item">
                   <ul class="header__nav">
+                    <li><a href="#">Как это работает</a></li>
                     <li><a href="#">Новости</a></li>
                     <li><a href="#">О платформе</a></li>
                     <li><a href="#">Помощь</a></li>
@@ -75,13 +79,13 @@
               </div>
               <div class="header__menu">
                 <ul class="header__menu-nav">
-                  <li><a href="#">Мои Деньги</a></li>
-                  <li><a href="#">Новые проекты</a></li>
-                  <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-                  <li><a href="#">Транзакции</a></li>
+                  <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+                  <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+                  <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+                  <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
                   <li><a href="#">Автоинвестироавние</a></li>
                 </ul>
-                <div class="header__menu-btns">
+                <div class="header__menu-btns" data-da=".header__item,991,2">
                   <a href="#" class="header__menu-btn">Пополнить</a>
                   <a href="#" class="header__menu-btn">Вывести</a>
                 </div>
@@ -90,7 +94,7 @@
           </div>
 
       
-      <div class="work">
+      <div class="work work-second">
         <div class="container">
             <div class="work__content">
                 <div class="work__content-item">
@@ -258,24 +262,32 @@
                     </div>
 
                     <div class="work__tabs">
-                        <div class="work__tab active" data-project-tabs>
+                        <div class="work__tab active" id="work__tab-first" data-project-tabs>
                             Экономический анализ
                         </div>
-                        <div class="work__tab" data-project-tabs>
+                        <div class="work__tab" id="work__tab-second" data-project-tabs>
                             Юридический анализ
                         </div>
-                        <div class="work__tab" data-project-tabs>
+                        <div class="work__tab" id="work__tab-third" data-project-tabs>
                             Стратегия взыскания
                         </div>
-                        <div class="work__tab" data-project-tabs>
+                        <div class="work__tab" id="work__tab-foure" data-project-tabs>
                             Документы
                         </div>
-                        <div class="work__tab" data-project-tabs>
+                        <div class="work__tab" id="work__tab-five" data-project-tabs>
                             События
                         </div>
                     </div>
 
-                    <div class="work__intro" data-project-content>
+                    <div class="work__intro" data-project-content id="work-first">
+                        <div class="work-mobile">
+                            <div class="work-mobile__title">
+                                Экономический анализ
+                            </div>
+                            <div class="work-mobile__arrow">
+                                <img src="images/project-arrow_b.svg" alt="">
+                            </div>
+                        </div>
                         <div class="work__intro-first">
                             <div class="info-tab__title">
                                 Информация о должнике
@@ -324,6 +336,23 @@
                                     <div class="tab-first__info">
                                         <p>Состояние компании можно охарактеризовать как устойчивое. Финансовые показатели имеют тенденцию роста, на балансе есть ликвидные активы. </p>
                                         <p>По состоянию на 30.05.2022 года заблокированные счета отсутствуют.</p>
+                                    </div>
+                                    <div class="tab-first__mobile">
+                                        <div class="tab-first__mobile-block">
+                                            <div class="tab-first__mobile-head">
+                                                Баланс компании
+                                            </div>
+                                            <div class="tab-first__mobile-file">
+                                                <div class="tab-first__mobile-name">
+                                                    req_preview.pdf   
+                                                </div>
+                                                <span>|</span>
+                                                <div class="tab-first__mobile-mb">
+                                                    0.8 Мб
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="images/archive-strong.svg" download="images/archive-strong.svg" class="tab-first__mobile-download">Скачать</a>
                                     </div>
                                     <table class="tab-first__table">
                                         <tbody>
@@ -446,7 +475,15 @@
                         </div>
                     </div>
 
-                    <div class="work__intro" style="display: none;" data-project-content>
+                    <div class="work__intro" style="display: none;" data-project-content id="work-second">
+                        <div class="work-mobile">
+                            <div class="work-mobile__title">
+                                Юридический анализ
+                            </div>
+                            <div class="work-mobile__arrow">
+                                <img src="images/project-arrow_b.svg" alt="">
+                            </div>
+                        </div>
                         <div class="work__intro-first">
                             <div class="prav-tabs__title">
                                 Правовой статус и структура долга
@@ -550,8 +587,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="prav-tabs__head-mobile prav-tabs__head-mobile--first">
+                                    Примечание
+                                </div>
                                 <div class="prav-tabs__line-info prav-tabs__line-info--first">
                                     Возможно довзыскание неустойки за период по 01.04.2022 г. в размере ориентировочно 190 750,00 руб.
+                                </div>
+                                <div class="prav-tabs__head-mobile prav-tabs__head-mobile--second">
+                                    Риски
                                 </div>
                                 <div class="prav-tabs__line-info prav-tabs__line-info--second">
                                     Риск снижения договорной неустойки, в связи с ее завышенной ставкой (0,5% в день от непогашенной суммы задолженности за день просрочки). Ходатайство о снижении неустойки по ст. 333 ГК РФ Должник не заявлял, в связи с чем риск в отношении взысканной судом неустойки в размере 1 012 102, 90 руб. носит сугубо теоретический характер. 
@@ -613,8 +656,16 @@
                         </div>
                     </div>
 
-                    <div class="work__intro" style="display: none;" data-project-content>
-                        <div class="work__intro-first">
+                    <div class="work__intro" style="display: none;" data-project-content id="work-third">
+                        <div class="work-mobile">
+                            <div class="work-mobile__title">
+                                Стратегия взыскания
+                            </div>
+                            <div class="work-mobile__arrow">
+                                <img src="images/project-arrow_b.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="work__intro-first work__intro-first--mobile">
                             <div class="tabs-plan__title">
                                 Основной план взыскания:
                             </div>
@@ -641,7 +692,7 @@
                             </div>
                         </div>
                         <div class="work__intro-second">
-                            <div class="work__end">
+                            <div class="work__end work__end-side" data-da=".work__intro-first--mobile,767,4">
                                 <div class="work__end-header">
                                     <div class="work__end-title">
                                         Один из возможных альтернативных сценариев взыскания
@@ -653,9 +704,6 @@
 
                               <div class="work__body">
                           <div class="tabs-three">
-                       <!--      <div class="tabs-plan__title">
-                                Один из возможных альтернативных сценариев взыскания
-                            </div> -->
                             <div class="tabs-plan__block">
                                 <ul>
                                     <li>Правопреемство по долгу в суде;</li>
@@ -680,7 +728,15 @@
                         </div>
                     </div>
 
-                    <div class="work__intro" style="display: none;" data-project-content>
+                    <div class="work__intro" style="display: none;" data-project-content id="work-foure">
+                        <div class="work-mobile">
+                            <div class="work-mobile__title">
+                                Документы
+                            </div>
+                            <div class="work-mobile__arrow">
+                                <img src="images/project-arrow_b.svg" alt="">
+                            </div>
+                        </div>
                         <div class="documents">
                             <div class="documents__items">
                                 <div class="documents__item">
@@ -757,7 +813,16 @@
                         </div>
                     </div>
                     
-                    <div class="work__intro work__intro-five" style="display: none;" data-project-content>
+                    <div class="work__intro work__intro-five" style="display: none;" data-project-content id="work-five">
+                        <div class="work-mobile">
+                            <div class="work-mobile__title">
+                                События
+                            </div>
+                            <div class="work-mobile__arrow">
+                                <img src="images/project-arrow_b.svg" alt="">
+                            </div>
+                        </div>
+                       
                         <div class="work__intro-second">
                             <div class="work__end">
 
@@ -916,6 +981,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="work__content-banner work__content-banner--second">
                     <div class="work__banner-header--second">
                         Вторичный рынок
@@ -950,6 +1016,59 @@
                             </div>
                             <a href="#" class="work__banner-btn">Купить</a>
                     </div>
+                </div>
+
+
+                <div class="work__content-banner work__content-banner--first">
+                    <div class="work__banner-mobile--head">
+                        Введите сумму инвестирования:
+                    </div>
+                    <div class="work__banner-mobile--block"></div>
+                    <div class="work__banner-line">
+                        <span>57%</span>
+                    </div>
+                    <div class="work__banner-days">
+                        Осталось дней: <span>14</span>
+                    </div>
+                    <div class="work__banner-header">
+                        <div class="work__banner-head">
+                            Доступно:
+                        </div>
+                        <div class="work__banner-price">
+                            1 274 373<span>,26 ₽</span>
+                        </div>
+                    </div>
+                        <div class="work__banner-max--header">
+                            <div class="work__banner-max--text">
+                                Минимальная инвестиция:
+                            </div>
+                            <div class="work__banner-max--text">
+                                300 000 ₽
+                            </div>
+                        </div>
+                        <div class="work__banner-block" data-da=".work__banner-mobile--block,991,0">
+                            <input type="number" placeholder="350 000">
+                            <span>₽</span>
+                        </div>
+                        <div class="work__banner-end--items">
+                            <div class="work__banner-end--item">
+                                <div class="work__banner-end--text">
+                                    Комиссия:
+                                </div>
+                                <div class="work__banner-end--text">
+                                    10 500<span>,00 ₽</span>
+                                </div>
+                            </div>
+                            <div class="work__banner-end--item">
+                                <div class="work__banner-end--text">
+                                    Итого:
+                                </div>
+                                <div class="work__banner-end--text">
+                                    360 500<span>,00 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#modal-invest" data-fancybox="" data-da=".work__banner-mobile--block,991,1" class="work__banner-btn">Инвестировать</a>
                 </div>
             </div>
         </div>
@@ -1008,6 +1127,7 @@
 
     <script src="./libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
     <script src="js/main.js"></script>
 
   </body>

@@ -26,8 +26,12 @@
               <a href="#" class="header__logo"><img src="images/logo.svg"
                   alt=""></a>
             </div>
+            <div class="header__burger">
+              <a href="#"><span></span></a>
+            </div>
             <div class="header__item">
               <ul class="header__nav">
+                <li><a href="#">Как это работает</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">О платформе</a></li>
                 <li><a href="#">Помощь</a></li>
@@ -49,7 +53,7 @@
                         Пушкин Павел
                       </div>
                       <div class="header__user-arrow">
-                        <img src="images/arrow-b.svg" alt="">
+                        <img src="images/header_user-arrow.svg" alt="">
                         <img src="images/user-strong.svg" alt="">
                       </div>
                     </div>
@@ -79,13 +83,13 @@
           </div>
           <div class="header__menu">
             <ul class="header__menu-nav">
-              <li><a href="#">Мои Деньги</a></li>
-              <li><a href="#">Новые проекты</a></li>
-              <li><a href="#">Мои Проекты <span>(38)</span></a></li>
-              <li><a href="#" class="active">Транзакции</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_1.svg" alt=""></div> Мои Деньги</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_2.svg" alt=""></div>Новые проекты</a></li>
+              <li><a href="#"><div class="header__menu-saidbar"><img src="images/said-bar_3.svg" alt=""></div>Мои Проекты <span>(38)</span></a></li>
+              <li><a href="#" class="active"><div class="header__menu-saidbar"><img src="images/said-bar_4.svg" alt=""></div>Транзакции</a></li>
               <li><a href="#">Автоинвестироавние</a></li>
             </ul>
-            <div class="header__menu-btns">
+            <div class="header__menu-btns" data-da=".header__item,991,2">
               <a href="#" class="header__menu-btn">Пополнить</a>
               <a href="#" class="header__menu-btn">Вывести</a>
             </div>
@@ -241,135 +245,325 @@
                 <table class="history__table-table">
                     <tbody>
                         <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
+                            <td><span>7854842</span> ООО «Саиджон»
+                            <span>17.06.2022</span></td>
+                            <td><div class="history__mobile-head">
+                              ID инвестиции
+                            </div>1234-5678</td>
                             <td>17.06.2022</td>
                             <td>Холдирование</td>
                             <td>10 000<span>,00 ₽</span> </td>
-                            <td>Резервирование средств 
+                            <td><div class="history__mobile-head">
+                              Пояснение
+                            </div>Резервирование средств 
+                            для инвестиции</td>
+                            <td><div class="history__mobile-head">
+                              ID поекта
+                            </div> 7854842</td>
+                            <td class="history__mobile-arrow">
+                              <img src="images/history__arow-t.svg" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                          <td><span>7854842</span> ООО «Саиджон»
+                          <span>17.06.2022</span></td>
+                          <td><div class="history__mobile-head">
+                            ID инвестиции
+                          </div>1234-5678</td>
+                          <td>17.06.2022</td>
+                          <td>Холдирование</td>
+                          <td class="active">10 000<span>,00 ₽</span> </td>
+                          <td><div class="history__mobile-head">
+                            Пояснение
+                          </div>Резервирование средств 
+                          для инвестиции</td>
+                          <td><div class="history__mobile-head">
+                            ID поекта
+                          </div> 7854842</td>
+                          <td class="history__mobile-arrow">
+                            <img src="images/history__arow-t.svg" alt="">
+                          </td>
+                      </tr>
+                      <tr>
+                        <td><span>7854842</span> ООО «Саиджон»
+                        <span>17.06.2022</span></td>
+                        <td><div class="history__mobile-head">
+                          ID инвестиции
+                        </div>1234-5678</td>
+                        <td>17.06.2022</td>
+                        <td>Холдирование</td>
+                        <td>10 000<span>,00 ₽</span> </td>
+                        <td><div class="history__mobile-head">
+                          Пояснение
+                        </div>Резервирование средств 
+                        для инвестиции</td>
+                        <td><div class="history__mobile-head">
+                          ID поекта
+                        </div> 7854842</td>
+                        <td class="history__mobile-arrow">
+                          <img src="images/history__arow-t.svg" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                      <td><span>7854842</span> ООО «Саиджон»
+                      <span>17.06.2022</span></td>
+                      <td><div class="history__mobile-head">
+                        ID инвестиции
+                      </div>1234-5678</td>
+                      <td>17.06.2022</td>
+                      <td>Холдирование</td>
+                      <td>10 000<span>,00 ₽</span> </td>
+                      <td><div class="history__mobile-head">
+                        Пояснение
+                      </div>Резервирование средств 
+                      для инвестиции</td>
+                      <td><div class="history__mobile-head">
+                        ID поекта
+                      </div> 7854842</td>
+                      <td class="history__mobile-arrow">
+                        <img src="images/history__arow-t.svg" alt="">
+                      </td>
+                  </tr>
+                  <tr>
+                    <td><span>7854842</span> ООО «Саиджон»
+                    <span>17.06.2022</span></td>
+                    <td><div class="history__mobile-head">
+                      ID инвестиции
+                    </div>1234-5678</td>
+                    <td>17.06.2022</td>
+                    <td>Холдирование</td>
+                    <td>10 000<span>,00 ₽</span> </td>
+                    <td><div class="history__mobile-head">
+                      Пояснение
+                    </div>Резервирование средств 
+                    для инвестиции</td>
+                    <td><div class="history__mobile-head">
+                      ID поекта
+                    </div> 7854842</td>
+                    <td class="history__mobile-arrow">
+                      <img src="images/history__arow-t.svg" alt="">
+                    </td>
+                </tr>
+                <tr>
+                  <td><span>7854842</span> ООО «Саиджон»
+                  <span>17.06.2022</span></td>
+                  <td><div class="history__mobile-head">
+                    ID инвестиции
+                  </div>1234-5678</td>
+                  <td>17.06.2022</td>
+                  <td>Холдирование</td>
+                  <td>10 000<span>,00 ₽</span> </td>
+                  <td><div class="history__mobile-head">
+                    Пояснение
+                  </div>Резервирование средств 
+                  для инвестиции</td>
+                  <td><div class="history__mobile-head">
+                    ID поекта
+                  </div> 7854842</td>
+                  <td class="history__mobile-arrow">
+                    <img src="images/history__arow-t.svg" alt="">
+                  </td>
+              </tr>
+              <tr>
+                <td><span>7854842</span> ООО «Саиджон»
+                <span>17.06.2022</span></td>
+                <td><div class="history__mobile-head">
+                  ID инвестиции
+                </div>1234-5678</td>
+                <td>17.06.2022</td>
+                <td>Холдирование</td>
+                <td>10 000<span>,00 ₽</span> </td>
+                <td><div class="history__mobile-head">
+                  Пояснение
+                </div>Резервирование средств 
                 для инвестиции</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Холдирование</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Резервирование размера комиссии</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Передача средств кредитору</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Списание комиссии</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Покупка на вторичном рынке</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Входящая</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Списание комиссии</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Входящая</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Резервирование средств 
-                для инвестиции</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Частичное взыскание</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Входящая</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>возврат инвестиции</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Списание комиссии</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Входящая</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Продажа на вторичном рынке</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Списание комиссии</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Входящая</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Зачисление собственных средств</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Исходящий</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Выведение собственных средств</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Холдирование</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Отмена резервирования средств для инвестиции</td>
-                        </tr>
-                        <tr>
-                            <td><span>7854842</span> ООО «Саиджон»</td>
-                            <td>1234-5678</td>
-                            <td>17.06.2022</td>
-                            <td>Холдирование</td>
-                            <td>10 000<span>,00 ₽</span> </td>
-                            <td>Отмена резервирования размера комиссии</td>
-                        </tr>
+                <td><div class="history__mobile-head">
+                  ID поекта
+                </div> 7854842</td>
+                <td class="history__mobile-arrow">
+                  <img src="images/history__arow-t.svg" alt="">
+                </td>
+            </tr>
+            <tr>
+              <td><span>7854842</span> ООО «Саиджон»
+              <span>17.06.2022</span></td>
+              <td><div class="history__mobile-head">
+                ID инвестиции
+              </div>1234-5678</td>
+              <td>17.06.2022</td>
+              <td>Холдирование</td>
+              <td>10 000<span>,00 ₽</span> </td>
+              <td><div class="history__mobile-head">
+                Пояснение
+              </div>Резервирование средств 
+              для инвестиции</td>
+              <td><div class="history__mobile-head">
+                ID поекта
+              </div> 7854842</td>
+              <td class="history__mobile-arrow">
+                <img src="images/history__arow-t.svg" alt="">
+              </td>
+          </tr>
+          <tr>
+            <td><span>7854842</span> ООО «Саиджон»
+            <span>17.06.2022</span></td>
+            <td><div class="history__mobile-head">
+              ID инвестиции
+            </div>1234-5678</td>
+            <td>17.06.2022</td>
+            <td>Холдирование</td>
+            <td>10 000<span>,00 ₽</span> </td>
+            <td><div class="history__mobile-head">
+              Пояснение
+            </div>Резервирование средств 
+            для инвестиции</td>
+            <td><div class="history__mobile-head">
+              ID поекта
+            </div> 7854842</td>
+            <td class="history__mobile-arrow">
+              <img src="images/history__arow-t.svg" alt="">
+            </td>
+        </tr>
+        <tr>
+          <td><span>7854842</span> ООО «Саиджон»
+          <span>17.06.2022</span></td>
+          <td><div class="history__mobile-head">
+            ID инвестиции
+          </div>1234-5678</td>
+          <td>17.06.2022</td>
+          <td>Холдирование</td>
+          <td>10 000<span>,00 ₽</span> </td>
+          <td><div class="history__mobile-head">
+            Пояснение
+          </div>Резервирование средств 
+          для инвестиции</td>
+          <td><div class="history__mobile-head">
+            ID поекта
+          </div> 7854842</td>
+          <td class="history__mobile-arrow">
+            <img src="images/history__arow-t.svg" alt="">
+          </td>
+      </tr>
+      <tr>
+        <td><span>7854842</span> ООО «Саиджон»
+        <span>17.06.2022</span></td>
+        <td><div class="history__mobile-head">
+          ID инвестиции
+        </div>1234-5678</td>
+        <td>17.06.2022</td>
+        <td>Холдирование</td>
+        <td>10 000<span>,00 ₽</span> </td>
+        <td><div class="history__mobile-head">
+          Пояснение
+        </div>Резервирование средств 
+        для инвестиции</td>
+        <td><div class="history__mobile-head">
+          ID поекта
+        </div> 7854842</td>
+        <td class="history__mobile-arrow">
+          <img src="images/history__arow-t.svg" alt="">
+        </td>
+    </tr>
+    <tr>
+      <td><span>7854842</span> ООО «Саиджон»
+      <span>17.06.2022</span></td>
+      <td><div class="history__mobile-head">
+        ID инвестиции
+      </div>1234-5678</td>
+      <td>17.06.2022</td>
+      <td>Холдирование</td>
+      <td>10 000<span>,00 ₽</span> </td>
+      <td><div class="history__mobile-head">
+        Пояснение
+      </div>Резервирование средств 
+      для инвестиции</td>
+      <td><div class="history__mobile-head">
+        ID поекта
+      </div> 7854842</td>
+      <td class="history__mobile-arrow">
+        <img src="images/history__arow-t.svg" alt="">
+      </td>
+  </tr>
+  <tr>
+    <td><span>7854842</span> ООО «Саиджон»
+    <span>17.06.2022</span></td>
+    <td><div class="history__mobile-head">
+      ID инвестиции
+    </div>1234-5678</td>
+    <td>17.06.2022</td>
+    <td>Холдирование</td>
+    <td>10 000<span>,00 ₽</span> </td>
+    <td><div class="history__mobile-head">
+      Пояснение
+    </div>Резервирование средств 
+    для инвестиции</td>
+    <td><div class="history__mobile-head">
+      ID поекта
+    </div> 7854842</td>
+    <td class="history__mobile-arrow">
+      <img src="images/history__arow-t.svg" alt="">
+    </td>
+</tr>
+<tr>
+  <td><span>7854842</span> ООО «Саиджон»
+  <span>17.06.2022</span></td>
+  <td><div class="history__mobile-head">
+    ID инвестиции
+  </div>1234-5678</td>
+  <td>17.06.2022</td>
+  <td>Холдирование</td>
+  <td>10 000<span>,00 ₽</span> </td>
+  <td><div class="history__mobile-head">
+    Пояснение
+  </div>Резервирование средств 
+  для инвестиции</td>
+  <td><div class="history__mobile-head">
+    ID поекта
+  </div> 7854842</td>
+  <td class="history__mobile-arrow">
+    <img src="images/history__arow-t.svg" alt="">
+  </td>
+</tr>
+<tr>
+  <td><span>7854842</span> ООО «Саиджон»
+  <span>17.06.2022</span></td>
+  <td><div class="history__mobile-head">
+    ID инвестиции
+  </div>1234-5678</td>
+  <td>17.06.2022</td>
+  <td>Холдирование</td>
+  <td>10 000<span>,00 ₽</span> </td>
+  <td><div class="history__mobile-head">
+    Пояснение
+  </div>Резервирование средств 
+  для инвестиции</td>
+  <td><div class="history__mobile-head">
+    ID поекта
+  </div> 7854842</td>
+  <td class="history__mobile-arrow">
+    <img src="images/history__arow-t.svg" alt="">
+  </td>
+</tr>
+<tr>
+  <td><span>7854842</span> ООО «Саиджон»
+  <span>17.06.2022</span></td>
+  <td><div class="history__mobile-head">
+    ID инвестиции
+  </div>1234-5678</td>
+  <td>17.06.2022</td>
+  <td>Холдирование</td>
+  <td>10 000<span>,00 ₽</span> </td>
+  <td><div class="history__mobile-head">
+    Пояснение
+  </div>Резервирование средств 
+  для инвестиции</td>
+  <td><div class="history__mobile-head">
+    ID поекта
+  </div> 7854842</td>
+  <td class="history__mobile-arrow">
+    <img src="images/history__arow-t.svg" alt="">
+  </td>
+</tr>
                     </tbody>
                 </table>
                </div>
@@ -399,7 +593,7 @@
                 </div>
               </div>
             </div>
-            <ul class="footer__nav">
+            <ul class="footer__nav" data-da=".footer__item,767,1">
               <li><a href="#">Как это работает</a></li>
               <li><a href="#">О Палтформе</a></li>
               <li><a href="#">Помощь</a></li>
@@ -434,6 +628,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
     <script src="js/leng.js"></script>
     <script
       type="text/javascript"
