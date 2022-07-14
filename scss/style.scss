@@ -13497,3 +13497,43 @@ input[type='number']:focus {
     max-width: 100%;
   }
 }
+
+.top_button {
+  border-radius: 50%;
+  padding: 13px 15px;
+  z-index: 150;
+  position: fixed;
+  bottom: 45px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  right: 20px;
+  background: #FFBA3B;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: 767px) {
+    bottom: 80px;
+  }
+
+  &:hover{
+    background: #ffc75f;
+  }
+
+  &.active{
+    display: flex;
+  }
+
+  &.top{
+    @media only screen and (max-width: 991px) {
+      bottom: 220px;
+    }
+  }
+
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
