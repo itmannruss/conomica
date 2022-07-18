@@ -2,7 +2,14 @@ $(document).ready(function () {
   $('.header__burger').click(function () {
     $(this).children().toggleClass('active')
     $('.header__item').toggleClass('active')
+    $(".header__burger-mobile").toggleClass('active')
     return false
+  })
+
+  $(".header__burger-mobile").click(function(){
+    $(this).toggleClass('active');
+    $('.header__burger').children().toggleClass('active')
+    $('.header__item').toggleClass('active')
   })
 
   $('.top_button').click(function (event) {
