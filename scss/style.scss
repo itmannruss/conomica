@@ -239,7 +239,7 @@ ul {
       top: 0;
       left: 0;
       width: 100%;
-      height: 485px;
+      height: 562px;
       background: #fff;
       z-index: 250;
       border-radius: 0 0 20px 20px;
@@ -248,7 +248,7 @@ ul {
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      top: -340px;
+      top: -420px;
       transition: 400ms;
 
       .header__panel {
@@ -261,22 +261,26 @@ ul {
         top: 0;
 
         .header__panel {
-          margin-bottom: 24px;
 
           &::before {
-            display: none;
+            top: -440px;
+            background: #F6F7F8;
+            height: 2px;
+            width: 120%;
+            left: -10%;
           }
         }
 
         .header__menu-btns {
-          display: flex;
+          opacity: 1;
+          transition: 300ms;
           width: 100%;
         }
       }
     }
 
     @media only screen and (max-width: 767px) {
-      top: -355px;
+      top: -437px;
     }
   }
 
@@ -292,7 +296,7 @@ ul {
     @media only screen and (max-width: 991px) {
       display: block;
       padding-left: 22px;
-      margin-bottom: 82px;
+      margin-bottom: 30px;
     }
 
     li {
@@ -324,7 +328,7 @@ ul {
         color: #9299a2;
 
         @media only screen and (max-width: 991px) {
-          font-size: 18px;
+          font-size: 16px;
           color: inherit;
         }
 
@@ -701,7 +705,8 @@ ul {
       align-items: center;
 
       @media only screen and (max-width: 991px) {
-        display: none;
+        opacity: 0;
+        margin-bottom: 25px;
       }
     }
 
@@ -744,6 +749,7 @@ ul {
         position: relative;
         background: #f6f7f8;
         color: #b7c0c8;
+        
         &::before {
           content: '';
           display: block;
@@ -13550,4 +13556,16 @@ input[type='number']:focus {
     align-items: center;
     justify-content: center;
   }
+}
+
+.mobile-link{
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+}
+
+.last-desk{
+  margin-right: 0 !important;
 }
