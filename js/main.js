@@ -18,6 +18,15 @@ $(document).ready(function () {
       $(".top_button").removeClass("active");
     }
   });
+  
+  $(window).scroll(function () {
+    var sc = $(window).scrollTop();
+    if (sc > 100) {
+      $(".work__content-banner").addClass("active");
+    } else {
+      $(".work__content-banner").removeClass("active");
+    }
+  });
 
   $('[data-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {
