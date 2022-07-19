@@ -26,14 +26,19 @@ $(document).ready(function () {
     }
   });
   
-  $(window).scroll(function () {
-    var sc = $(window).scrollTop();
-    if (sc > 100) {
-      $(".work__content-banner").addClass("active");
-    } else {
-      $(".work__content-banner").removeClass("active");
+
+  $(".work__banner-block input").click(function(){
+    $(".work__content-banner").addClass("active");
+    $(".top_button").addClass("move");
+  })
+
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.work__content-banner').length) {
+      $('.work__content-banner').removeClass('active')
+      $(".top_button").removeClass("move");
     }
-  });
+    e.stopPropagation()
+  })
 
   $('[data-tabs]').on('click', function () {
     if (!$(this).hasClass('active')) {

@@ -806,39 +806,42 @@ ul {
     a {
       display: block;
       cursor: pointer;
-      padding: 12px 0;
+      padding-left: 7px;
+
       span {
         position: relative;
         display: block;
         width: 14px;
         height: 2px;
-        border-radius: 2px;
+        border-radius: 4px;
         background: #2b2b2b;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
+        
         &:before,
         &:after {
           content: '';
           width: 18px;
           height: 2px;
           position: absolute;
-          left: 0;
+          left: -4px;
           background: #2b2b2b;
-          border-radius: 2px;
+          border-radius: 4px;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
         }
         &:before {
-          top: -8px;
+          top: -6px;
         }
         &:after {
-          top: 8px;
+          top: 6px;
         }
       }
       &.active {
         span {
           background: transparent;
           &:before {
+            top: -9px;
             -webkit-transform: rotate(45deg) translate(5px, 6px);
             transform: rotate(45deg) translate(5px, 6px);
           }
@@ -13557,7 +13560,11 @@ input[type='number']:focus {
 
   &.top{
     @media only screen and (max-width: 991px) {
-      bottom: 220px;
+      bottom: 120px;
+
+      &.move{
+        bottom: 230px;
+      }
     }
   }
 

@@ -850,7 +850,7 @@ ul {
 .header__burger a {
   display: block;
   cursor: pointer;
-  padding: 12px 0;
+  padding-left: 7px;
 }
 
 .header__burger a span {
@@ -858,7 +858,7 @@ ul {
   display: block;
   width: 14px;
   height: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
   background: #2b2b2b;
   transition: all 0.2s ease-in-out;
 }
@@ -868,18 +868,18 @@ ul {
   width: 18px;
   height: 2px;
   position: absolute;
-  left: 0;
+  left: -4px;
   background: #2b2b2b;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
 
 .header__burger a span:before {
-  top: -8px;
+  top: -6px;
 }
 
 .header__burger a span:after {
-  top: 8px;
+  top: 6px;
 }
 
 .header__burger a.active span {
@@ -887,6 +887,7 @@ ul {
 }
 
 .header__burger a.active span:before {
+  top: -9px;
   transform: rotate(45deg) translate(5px, 6px);
 }
 
@@ -14692,7 +14693,10 @@ input[type='number']:focus {
 
 @media only screen and (max-width: 991px) {
   .top_button.top {
-    bottom: 220px;
+    bottom: 120px;
+  }
+  .top_button.top.move {
+    bottom: 230px;
   }
 }
 
