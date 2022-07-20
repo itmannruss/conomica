@@ -12,6 +12,12 @@ $(document).ready(function () {
     $('.header__item').toggleClass('active')
   })
 
+  $(".header__user").click(function(){
+    $(".header__burger-mobile").toggleClass("active")
+    $('.header__burger').children().toggleClass('active')
+    $('.header__item').toggleClass('active')
+  })
+
   $('.top_button').click(function (event) {
     event.preventDefault()
     $('html, body').animate({ scrollTop: 0 }, 500)
